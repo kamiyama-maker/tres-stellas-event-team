@@ -1428,22 +1428,22 @@ function getDefaultData() {
       { id: 4, title: '各部活の活動内容と代表者をまとめる', assignee: '全員', due: '2026-04-29', priority: 'mid', done: false },
     ],
     clubs: [
-      { id: 1, name: '鰻部', leader: '星 泰衣', memberCount: 22, status: 'active' },
-      { id: 2, name: 'おっさんぽ部', leader: '鈴木 英明', memberCount: 18, status: 'active' },
-      { id: 3, name: 'ガンプラ部', leader: '竹房 裕貴', memberCount: 15, status: 'active' },
-      { id: 4, name: 'キャンプ部', leader: '入倉 大亮', memberCount: 20, status: 'active' },
-      { id: 5, name: '劇団四季部', leader: '中島 美咲', memberCount: 16, status: 'active' },
-      { id: 6, name: 'ゴルフ部', leader: '(仮)安田 賢司', memberCount: 25, status: 'active' },
-      { id: 7, name: 'ゴーカート部', leader: '高橋 智之', memberCount: 18, status: 'active' },
-      { id: 8, name: 'サウナ部', leader: '原田 準一郎', memberCount: 20, status: 'active' },
-      { id: 9, name: '写真部', leader: '森脇 剛', memberCount: 15, status: 'active' },
-      { id: 10, name: '鮪グルメ部', leader: '日野 元太', memberCount: 22, status: 'active' },
-      { id: 11, name: '釣り部', leader: '石川 源起', memberCount: 18, status: 'active' },
-      { id: 12, name: '蹴球部', leader: '飯塚 智貴', memberCount: 20, status: 'active' },
-      { id: 13, name: '旅行部', leader: '須藤 久美子', memberCount: 14, status: 'active' },
-      { id: 14, name: 'ワイン部', leader: '日原 聡一郎', memberCount: 16, status: 'active' },
-      { id: 15, name: 'one piece座談部', leader: '伊藤 将太郎', memberCount: 18, status: 'active' },
-      { id: 16, name: 'TRES STELLAS FC', leader: '田田 めぐみ', memberCount: 12, desc: 'サッカー/ソサイチ/フットサル', status: 'active' },
+      { id: 1, name: '鰻部', leader: '星 泰衣', memberCount: 22, status: 'active', members: [] },
+      { id: 2, name: 'おっさんぽ部', leader: '鈴木 英明', memberCount: 18, status: 'active', members: [] },
+      { id: 3, name: 'ガンプラ部', leader: '竹房 裕貴', memberCount: 15, status: 'active', members: [] },
+      { id: 4, name: 'キャンプ部', leader: '入倉 大亮', memberCount: 20, status: 'active', members: [] },
+      { id: 5, name: '劇団四季部', leader: '中島 美咲', memberCount: 16, status: 'active', members: [] },
+      { id: 6, name: 'ゴルフ部', leader: '(仮)安田 賢司', memberCount: 25, status: 'active', members: [] },
+      { id: 7, name: 'ゴーカート部', leader: '高橋 智之', memberCount: 18, status: 'active', members: [] },
+      { id: 8, name: 'サウナ部', leader: '原田 準一郎', memberCount: 20, status: 'active', members: [] },
+      { id: 9, name: '写真部', leader: '森脇 剛', memberCount: 15, status: 'active', members: [] },
+      { id: 10, name: '鮪グルメ部', leader: '日野 元太', memberCount: 22, status: 'active', members: [] },
+      { id: 11, name: '釣り部', leader: '石川 源起', memberCount: 18, status: 'active', members: [] },
+      { id: 12, name: '蹴球部', leader: '飯塚 智貴', memberCount: 20, status: 'active', members: [] },
+      { id: 13, name: '旅行部', leader: '須藤 久美子', memberCount: 14, status: 'active', members: [] },
+      { id: 14, name: 'ワイン部', leader: '日原 聡一郎', memberCount: 16, status: 'active', members: [] },
+      { id: 15, name: 'one piece座談部', leader: '伊藤 将太郎', memberCount: 18, status: 'active', members: [] },
+      { id: 16, name: 'TRES STELLAS FC', leader: '田田 めぐみ', memberCount: 12, desc: 'サッカー/ソサイチ/フットサル', status: 'active', members: [] },
     ],
     members: [
       { name: '川上 宏光', role: '対面イベント委員長（グループ作成者）', initials: '川', leader: true },
@@ -1468,8 +1468,8 @@ function getDefaultData() {
       { id: 'a10', date: '2026-07-01', presenter: 'Saki Yagishita', category: 'event', content: 'FEEL TRES STELLAS 最終案内・持ち物・集合時間', status: 'planned' },
     ],
     specialEvents: [
-      { id: 'se1', type: 'clubIntro', title: '部活動紹介タイモ', date: '', slot: '10:00-11:00', desc: '定例会後の10時枠で各部活の代表者が活動内容をプレゼン。他チームのイベントと被らない日程で1回実施', status: 'planning' },
-      { id: 'se2', type: 'exhibitorBriefing', title: '出展者説明会', date: '', timeSlot: '夜', desc: 'FEEL TRES STELLASのブース出展者向け説明会。出展者のみ対象。ブースの作り方・当日の流れ・注意事項を共有', status: 'planning' },
+      { id: 'se1', type: 'clubIntro', title: '部活動紹介タイモ', date: '', slot: '10:00-11:00', desc: '定例会後の10時枠で各部活の代表者が活動内容をプレゼン。他チームのイベントと被らない日程で1回実施', status: 'planning', members: [] },
+      { id: 'se2', type: 'exhibitorBriefing', title: '出展者説明会', date: '', timeSlot: '夜', desc: 'FEEL TRES STELLASのブース出展者向け説明会。出展者のみ対象。ブースの作り方・当日の流れ・注意事項を共有', status: 'planning', members: [] },
     ]
   };
 }
@@ -1678,26 +1678,38 @@ function renderTodos() {
       <div class="todo-content">
         <div class="todo-title ${t.done ? 'done' : ''}">${t.title}</div>
         <div class="todo-meta">
-          <span class="todo-priority ${t.priority === 'high' ? 'priority-high' : t.priority === 'mid' ? 'priority-mid' : 'priority-low'}">${
-            t.priority === 'high' ? '高' : t.priority === 'mid' ? '中' : '低'
-          }</span>
-          担当: ${t.assignee} ／ 期限: ${t.due}
+          <span class="todo-priority ${t.priority === 'high' ? 'priority-high' : t.priority === 'mid'function renderClubs() {
+  document.getElementById('clubList').innerHTML = data.clubs.map((c, idx) => `
+    <div class="club-card" style="position:relative">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start">
+        <div class="club-name">${c.name}</div>
+        <button onclick="editClub(${idx})" style="background:none;border:1px solid #ccc;border-radius:6px;padding:4px 10px;font-size:11px;cursor:pointer;color:#555">編集</button>
+      </div>
+      ${c.desc ? `<div class="club-desc">${c.desc}</div>` : ''}
+      <div style="margin-top:6px;font-size:12px;color:#555">
+        <span style="display:inline-block;margin-right:12px">\u{1F451} 部長: <strong>${c.leader}</strong></span>
+      </div>
+      <div class="club-members" style="margin-top:4px">\u{1F465} ${c.memberCount || 0}名参加</div>
+      ${c.members && c.members.length > 0 ? `
+        <div style="margin-top:8px;padding-top:8px;border-top:1px dashed #ddd">
+          <div style="font-size:11px;color:#888;margin-bottom:4px">\u{1F4CB} 所属メンバー:</div>
+          <div style="display:flex;flex-wrap:wrap;gap:4px">
+            ${c.members.map(m => `<span style="background:#f0f4e8;padding:2px 8px;border-radius:10px;font-size:11px;color:#444">${m}</span>`).join('')}
+          </div>
         </div>
+      ` : `
+        <div style="margin-top:8px;padding-top:8px;border-top:1px dashed #ddd">
+          <div style="font-size:11px;color:#bbb;font-style:italic">メンバー未登録（編集から追加できます）</div>
+        </div>
+      `}
+      <div style="margin-top:8px;display:flex;align-items:center;gap:8px">
+        <span class="status-badge status-${c.status}">${
+          c.status === 'active' ? '活動中' : c.status === 'planning' ? '準備中' : 'アイデア'
+        }</span>
       </div>
     </div>
   `).join('');
-}
-
-function renderClubs() {
-  document.getElementById('clubList').innerHTML = data.clubs.map(c => `
-    <div class="club-card">
-      <div class="club-name">${c.name}</div>
-      ${c.desc ? `<div class="club-desc">${c.desc}</div>` : ''}
-      <div style="margin-top:6px;font-size:12px;color:#555">
-        <span style="display:inline-block;margin-right:12px">👑 部長: <strong>${c.leader}</strong></span>
-      </div>
-      <div class="club-members" style="margin-top:4px">👥 ${c.memberCount || 0}名参加</div>
-      <div style="margin-top:8px;display:flex;align-items:center;gap:8px">
+}ay:flex;align-items:center;gap:8px">
         <span class="status-badge status-${c.status}">${
           c.status === 'active' ? '活動中' : c.status === 'planning' ? '準備中' : 'アイデア'
         }</span>
@@ -2157,7 +2169,75 @@ function renderAll() {
 }
 
 renderAll();
+
+function editClub(idx) {
+  const c = data.clubs[idx];
+  document.getElementById('clubEditModal').style.display = 'flex';
+  document.getElementById('clubEditIdx').value = idx;
+  document.getElementById('clubEditName').value = c.name;
+  document.getElementById('clubEditLeader').value = c.leader;
+  document.getElementById('clubEditCount').value = c.memberCount || 0;
+  document.getElementById('clubEditStatus').value = c.status;
+  document.getElementById('clubEditMembers').value = (c.members || []).join('\n');
+}
+
+function saveClub() {
+  const idx = parseInt(document.getElementById('clubEditIdx').value);
+  const c = data.clubs[idx];
+  c.name = document.getElementById('clubEditName').value;
+  c.leader = document.getElementById('clubEditLeader').value;
+  c.memberCount = parseInt(document.getElementById('clubEditCount').value) || 0;
+  c.status = document.getElementById('clubEditStatus').value;
+  const membersText = document.getElementById('clubEditMembers').value.trim();
+  c.members = membersText ? membersText.split('\n').map(m => m.trim()).filter(m => m) : [];
+  if (c.members.length > 0) c.memberCount = c.members.length;
+  closeClubEdit();
+  renderClubs();
+  saveToLocal();
+}
+
+function closeClubEdit() {
+  document.getElementById('clubEditModal').style.display = 'none';
+}
+
 </script>
 
+
+<div id="clubEditModal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.5);z-index:1000;justify-content:center;align-items:center" onclick="if(event.target===this)closeClubEdit()">
+  <div style="background:#fff;border-radius:12px;padding:28px;width:90%;max-width:480px;max-height:90vh;overflow-y:auto">
+    <h3 style="margin:0 0 16px;color:#2d5016">部活動を編集</h3>
+    <input type="hidden" id="clubEditIdx">
+    <div style="margin-bottom:12px">
+      <label style="font-size:12px;color:#666;display:block;margin-bottom:4px">部活名</label>
+      <input id="clubEditName" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:6px;font-size:14px;box-sizing:border-box">
+    </div>
+    <div style="margin-bottom:12px">
+      <label style="font-size:12px;color:#666;display:block;margin-bottom:4px">部長</label>
+      <input id="clubEditLeader" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:6px;font-size:14px;box-sizing:border-box">
+    </div>
+    <div style="display:flex;gap:12px;margin-bottom:12px">
+      <div style="flex:1">
+        <label style="font-size:12px;color:#666;display:block;margin-bottom:4px">参加人数</label>
+        <input id="clubEditCount" type="number" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:6px;font-size:14px;box-sizing:border-box">
+      </div>
+      <div style="flex:1">
+        <label style="font-size:12px;color:#666;display:block;margin-bottom:4px">ステータス</label>
+        <select id="clubEditStatus" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:6px;font-size:14px;box-sizing:border-box">
+          <option value="active">活動中</option>
+          <option value="planning">準備中</option>
+          <option value="idea">アイデア</option>
+        </select>
+      </div>
+    </div>
+    <div style="margin-bottom:16px">
+      <label style="font-size:12px;color:#666;display:block;margin-bottom:4px">所属メンバー（1行に1名）</label>
+      <textarea id="clubEditMembers" rows="6" placeholder="例:&#10;田中 太郎&#10;鈴木 花子" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:6px;font-size:13px;box-sizing:border-box;resize:vertical"></textarea>
+    </div>
+    <div style="display:flex;gap:8px;justify-content:flex-end">
+      <button onclick="closeClubEdit()" style="padding:8px 20px;border:1px solid #ccc;border-radius:6px;background:#fff;cursor:pointer">キャンセル</button>
+      <button onclick="saveClub()" style="padding:8px 20px;border:none;border-radius:6px;background:#2d5016;color:#fff;cursor:pointer;font-weight:bold">保存</button>
+    </div>
+  </div>
+</div>
 </body>
 </html>
