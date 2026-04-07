@@ -1,9 +1,9 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TRES STELLAS 25期 対面イベントチーム</title>
+<title>TRES STELLAS 25æ å¯¾é¢ã¤ãã³ããã¼ã </title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap');
 
@@ -767,6 +767,71 @@
     color: var(--text-light);
     margin-top: 8px;
   }
+
+  /* ===== Chorei (æç¤¼çºè¡¨) Styles ===== */
+  .chorei-banner {
+    background: linear-gradient(135deg, var(--accent), #f5d76e);
+    color: var(--primary-dark);
+    padding: 14px 20px;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 14px;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 2px 8px rgba(232,185,49,0.3);
+  }
+  .chorei-this-week {
+    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+    color: white;
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 16px;
+  }
+  .chorei-this-week .label { font-size: 12px; opacity: 0.8; margin-bottom: 8px; }
+  .chorei-this-week .topic { font-size: 18px; font-weight: 700; margin-bottom: 12px; }
+  .chorei-this-week .presenter-row { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+  .chorei-this-week .presenter-avatar {
+    width: 36px; height: 36px; border-radius: 50%;
+    background: var(--accent); color: var(--primary-dark);
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 900; font-size: 14px;
+  }
+  .cat-badge {
+    display: inline-block; padding: 2px 10px; border-radius: 12px;
+    font-size: 11px; font-weight: 700; letter-spacing: 0.5px;
+  }
+  .cat-event { background: #fff3cd; color: #856404; }
+  .cat-pitch { background: #cce5ff; color: #004085; }
+  .cat-club { background: #d4edda; color: #155724; }
+  .cat-exhibitor { background: #e2d5f1; color: #4a1d8e; }
+  .cat-other { background: #e2e3e5; color: #383d41; }
+  .ann-status { font-size: 11px; font-weight: 500; }
+  .ann-status.planned { color: var(--info); }
+  .ann-status.preparing { color: var(--warning); }
+  .ann-status.done { color: var(--success); }
+  .ann-table { width: 100%; border-collapse: collapse; }
+  .ann-table th { text-align: left; font-size: 11px; color: var(--text-light); padding: 8px; border-bottom: 2px solid var(--border); }
+  .ann-table td { padding: 10px 8px; border-bottom: 1px solid var(--border); font-size: 13px; vertical-align: middle; }
+  .ann-table tr:hover { background: #f0f4f0; }
+  .ann-edit-btn {
+    background: none; border: 1px solid var(--border); border-radius: 6px;
+    padding: 4px 10px; font-size: 11px; cursor: pointer; color: var(--primary);
+  }
+  .ann-edit-btn:hover { background: var(--primary); color: white; }
+  .special-event-card {
+    border: 2px dashed var(--border);
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+  }
+  .special-event-card h4 { color: var(--primary); margin-bottom: 8px; }
+  .special-event-card .desc { font-size: 12px; color: var(--text-light); margin-bottom: 12px; }
+  .special-event-card .se-status {
+    display: inline-block; padding: 4px 12px; border-radius: 16px;
+    font-size: 11px; font-weight: 700; background: #fff3cd; color: #856404;
+  }
 </style>
 </head>
 <body>
@@ -775,20 +840,22 @@
   <div class="header-top">
     <div class="header-logo">
       <span class="badge">25th</span>
-      <h1>TRES STELLAS<span>対面イベントチーム</span></h1>
+      <h1>TRES STELLAS<span>å¯¾é¢ã¤ãã³ããã¼ã </span></h1>
     </div>
     <div class="header-slogan">
-      <em>壊せ　そして、創れ、仲間の実りのために</em><br>— For The Members
+      <em>å£ããããã¦ãåµããä»²éã®å®ãã®ããã«</em><br>â For The Members
     </div>
   </div>
   <div class="nav-tabs" id="navTabs">
-    <div class="nav-tab active" data-page="dashboard">ダッシュボード</div>
-    <div class="nav-tab" data-page="schedule">今期スケジュール</div>
-    <div class="nav-tab" data-page="meetings">定例会議</div>
-    <div class="nav-tab" data-page="initiatives">施策</div>
-    <div class="nav-tab" data-page="clubs">部活動</div>
+    <div class="nav-tab active" data-page="dashboard">ããã·ã¥ãã¼ã</div>
+    <div class="nav-tab" data-page="chorei">æç¤¼çºè¡¨</div>
+    <div class="nav-tab" data-page="schedule">ä»æã¹ã±ã¸ã¥ã¼ã«</div>
+    <div class="nav-tab" data-page="meetings">å®ä¾ä¼è­°</div>
+    <div class="nav-tab" data-page="initiatives">æ½ç­</div>
+    <div class="nav-tab" data-page="clubs">é¨æ´»å</div>
     <div class="nav-tab" data-page="todos">TODO</div>
-    <div class="nav-tab" data-page="members">メンバー</div>
+    <div class="nav-tab" data-page="members">ã¡ã³ãã¼</div>
+    <div class="nav-tab" data-page="julyevent">7æã¤ãã³ãä¼ç»</div>
   </div>
 </div>
 
@@ -800,67 +867,101 @@
     <div class="grid-2" style="margin-bottom:16px">
       <div class="countdown-box" id="countdownBox"></div>
       <div class="card">
-        <div class="card-title"><span class="icon">📊</span> 25期 進行状況</div>
+        <div class="card-title"><span class="icon">ð</span> 25æ é²è¡ç¶æ³</div>
         <div id="termProgress"></div>
       </div>
     </div>
 
     <div class="card" style="margin-bottom:16px">
-      <div class="card-title"><span class="icon">🎯</span> KPI ダッシュボード</div>
+      <div class="card-title"><span class="icon">ð¯</span> KPI ããã·ã¥ãã¼ã</div>
       <div class="grid-2">
         <div class="kpi-box">
-          <div class="kpi-label">新人シートバリュー目標</div>
-          <div class="kpi-value">500<span class="kpi-unit">万円</span></div>
+          <div class="kpi-label">æ°äººã·ã¼ãããªã¥ã¼ç®æ¨</div>
+          <div class="kpi-value">500<span class="kpi-unit">ä¸å</span></div>
           <div class="progress-bar"><div class="progress-fill" style="width:0%" id="kpi1-bar"></div></div>
-          <div class="kpi-sub">現在: <span id="kpi1-current">0</span>万円</div>
+          <div class="kpi-sub">ç¾å¨: <span id="kpi1-current">0</span>ä¸å</div>
         </div>
         <div class="kpi-box">
-          <div class="kpi-label">シートバリュー目標</div>
-          <div class="kpi-value">1,000<span class="kpi-unit">万円</span></div>
+          <div class="kpi-label">ã·ã¼ãããªã¥ã¼ç®æ¨</div>
+          <div class="kpi-value">1,000<span class="kpi-unit">ä¸å</span></div>
           <div class="progress-bar"><div class="progress-fill" style="width:0%" id="kpi2-bar"></div></div>
-          <div class="kpi-sub">現在: <span id="kpi2-current">0</span>万円</div>
+          <div class="kpi-sub">ç¾å¨: <span id="kpi2-current">0</span>ä¸å</div>
         </div>
       </div>
     </div>
 
+    <div class="card" style="margin-bottom:16px" id="dashChoreiCard"></div>
+
     <div class="grid-2">
       <div class="card">
-        <div class="card-title"><span class="icon">📅</span> 直近の予定</div>
+        <div class="card-title"><span class="icon">ð</span> ç´è¿ã®äºå®</div>
         <div id="upcomingEvents"></div>
       </div>
       <div class="card">
-        <div class="card-title"><span class="icon">✅</span> 最新TODO</div>
+        <div class="card-title"><span class="icon">â</span> ææ°TODO</div>
         <div id="recentTodos"></div>
       </div>
     </div>
 
     <div class="card" style="margin-top:16px">
-      <div class="card-title"><span class="icon">💬</span> チーム連絡</div>
+      <div class="card-title"><span class="icon">ð¬</span> ãã¼ã é£çµ¡</div>
       <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center">
         <a href="https://www.facebook.com/messages/t/1625819681754306" target="_blank" class="messenger-link">
-          Messengerスレッド →
+          Messengerã¹ã¬ãã â
         </a>
         <a href="https://us06web.zoom.us/j/83171327219" target="_blank" style="display:inline-flex;align-items:center;gap:6px;background:linear-gradient(135deg,#2D8CFF,#0B5CFF);color:white;padding:8px 16px;border-radius:20px;font-size:13px;font-weight:500;text-decoration:none;transition:all 0.2s">
-          📹 Zoom定例に参加
+          ð¹ Zoomå®ä¾ã«åå 
         </a>
       </div>
       <p style="font-size:12px;color:var(--text-light);margin-top:8px">
-        毎週火曜 09:45 / ID: 831 7132 7219 / Pass: 3150
+        æ¯é±ç«æ 09:45 / ID: 831 7132 7219 / Pass: 3150
       </p>
+    </div>
+  </div>
+
+  <!-- ======== CHOREI (æç¤¼çºè¡¨) ======== -->
+  <div class="page" id="page-chorei">
+    <div id="choreiBanner"></div>
+
+    <div class="grid-2" style="margin-bottom:16px">
+      <div class="chorei-this-week" id="choreiThisWeek"></div>
+      <div class="card">
+        <div class="card-title"><span class="icon">ð</span> çºè¡¨æå½è</div>
+        <p style="font-size:13px;color:var(--text-light);margin-bottom:12px">æ¯é±ç«æ 6:40ã å®ä¾æç¤¼åã®2åé</p>
+        <div style="display:flex;gap:16px;flex-wrap:wrap" id="choreiPresenterList"></div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-bottom:16px">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px">
+        <div class="card-title" style="margin-bottom:0"><span class="icon">ðï¸</span> çºè¡¨ã¹ã±ã¸ã¥ã¼ã«</div>
+        <button class="add-btn" onclick="openModal('announcement')">+ çºè¡¨ãè¿½å </button>
+      </div>
+      <table class="ann-table">
+        <thead>
+          <tr><th>æ¥ä»</th><th>çºè¡¨è</th><th>ã«ãã´ãª</th><th>åå®¹</th><th>ç¶æ</th><th></th></tr>
+        </thead>
+        <tbody id="annScheduleBody"></tbody>
+      </table>
+    </div>
+
+    <div class="card">
+      <div class="card-title"><span class="icon">ð</span> ç¹å¥ä¼ç»</div>
+      <div class="grid-2" id="specialEventsGrid"></div>
     </div>
   </div>
 
   <!-- ======== SCHEDULE ======== -->
   <div class="page" id="page-schedule">
     <div class="card">
-      <div class="card-title"><span class="icon">📅</span> 25期スケジュール（2026年4月〜9月）</div>
+      <div class="card-title"><span class="icon">ð</span> 25æã¹ã±ã¸ã¥ã¼ã«ï¼2026å¹´4æã9æï¼</div>
       <table class="schedule-table">
         <thead>
           <tr>
-            <th style="width:120px">日付</th>
-            <th style="width:60px">曜日</th>
-            <th>イベント</th>
-            <th style="width:100px">ステータス</th>
+            <th style="width:120px">æ¥ä»</th>
+            <th style="width:60px">ææ¥</th>
+            <th>ã¤ãã³ã</th>
+            <th style="width:100px">ã¹ãã¼ã¿ã¹</th>
           </tr>
         </thead>
         <tbody id="scheduleBody"></tbody>
@@ -871,15 +972,15 @@
   <!-- ======== MEETINGS ======== -->
   <div class="page" id="page-meetings">
     <div class="meeting-zoom-info">
-      <span class="zoom-label">📹 Zoom定例</span>
-      <span>毎週火曜 09:45〜10:00</span>
+      <span class="zoom-label">ð¹ Zoomå®ä¾</span>
+      <span>æ¯é±ç«æ 09:45ã10:00</span>
       <span style="margin-left:auto;font-size:12px">ID: 831 7132 7219 / Pass: 3150</span>
-      <a href="https://us06web.zoom.us/j/83171327219" target="_blank" style="background:#2D8CFF;color:white;padding:6px 16px;border-radius:6px;text-decoration:none;font-size:12px;font-weight:700;margin-left:8px">Zoomに参加</a>
+      <a href="https://us06web.zoom.us/j/83171327219" target="_blank" style="background:#2D8CFF;color:white;padding:6px 16px;border-radius:6px;text-decoration:none;font-size:12px;font-weight:700;margin-left:8px">Zoomã«åå </a>
     </div>
 
     <div class="weekly-banner">
       <div>
-        <div class="label">次回定例会議</div>
+        <div class="label">æ¬¡åå®ä¾ä¼è­°</div>
         <div class="time" id="nextMeetingDate"></div>
       </div>
       <div id="nextMeetingCountdown" style="font-size:14px;font-weight:500"></div>
@@ -887,8 +988,8 @@
 
     <div class="card">
       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px">
-        <div class="card-title" style="margin-bottom:0"><span class="icon">📝</span> 会議ログ</div>
-        <button class="add-btn" onclick="openModal('meeting')">+ 会議記録を追加</button>
+        <div class="card-title" style="margin-bottom:0"><span class="icon">ð</span> ä¼è­°ã­ã°</div>
+        <button class="add-btn" onclick="openModal('meeting')">+ ä¼è­°è¨é²ãè¿½å </button>
       </div>
       <div id="meetingLog"></div>
     </div>
@@ -898,35 +999,35 @@
   <div class="page" id="page-initiatives">
     <div class="grid-2">
       <div class="initiative-card">
-        <div class="initiative-number">施策 ①</div>
+        <div class="initiative-number">æ½ç­ â </div>
         <div class="initiative-title">FEEL TRES STELLAS</div>
         <div class="initiative-desc">
-          <strong>7月7日（火）</strong>対面イベント＆BOD<br><br>
-          ブース出展形式のチャプターイベント。各メンバーが自社の魅力を体験型で伝える場。<br><br>
-          <strong>ポイント：</strong><br>
-          ・ブース出展者の募集と取りまとめ<br>
-          ・会場レイアウトの設計<br>
-          ・ビジター招待目標の設定<br>
-          ・事前告知・SNS連携
+          <strong>·æ7æ¥ï¼ç«ï¼</strong>å¯¾é¢ã¤ãã³ãï¼BOD<br><br>
+          ãã¼ã¹åºå±å½¢å¼ã®ãã£ãã¿ã¼ã¤ãã³ããåã¡ã³ãã¼ãèªç¤¾ã®é­åãä½é¨åã§ä¼ããå ´ã<br><br>
+          <strong>ãã¤ã³ãï¼</strong><br>
+          ã»ãã¼ã¹åºå±èã®åéã¨åãã¾ã¨ã<br>
+          ã»ä¼å ´ã¬ã¤ã¢ã¦ãã®è¨­è¨<br>
+          ã»ãã¸ã¿ã¼æå¾ç®æ¨ã®è¨­å®<br>
+          ã»äºååç¥ã»SNSé£æº
         </div>
         <div style="margin-top:12px">
-          <span class="status-badge status-planning">企画中</span>
+          <span class="status-badge status-planning">ä¼ç»ä¸­</span>
         </div>
       </div>
       <div class="initiative-card">
-        <div class="initiative-number">施策 ②</div>
-        <div class="initiative-title">部活紹介タイム</div>
+        <div class="initiative-number">æ½ç­ â¡</div>
+        <div class="initiative-title">é¨æ´»ç´¹ä»ã¿ã¤ã </div>
         <div class="initiative-desc">
-          <strong>朝礼後・対面イベント時</strong>に実施<br><br>
-          メンバー同士の交流を深めるための部活動を活性化。定例朝礼後や対面イベント時に各部活の紹介タイムを設ける。<br><br>
-          <strong>ポイント：</strong><br>
-          ・紹介タイムの運用ルール策定<br>
-          ・各部活の活動内容まとめ<br>
-          ・新規部員の募集促進<br>
-          ・スケジュール調整
+          <strong>æç¤¼å¾ã»å¯¾é¢ã¤ãã³ãæ</strong>ã«å®æ½<br><br>
+          ã¡ã³ãã¼åå£«ã®äº¤æµãæ·±ããããã®é¨æ´»åãæ´»æ§åãå®ä¾æç¤¼å¾ãå¯¾é¢ã¤ãã³ãæã«åé¨æ´»ã®ç´¹ä»ã¿ã¤ã ãè¨­ããã<br><br>
+          <strong>ãã¤ã³ãï¼</strong><br>
+          ã»ç´¹ä»ã¿ã¤ã ã®éç¨ã«ã¼ã«ç­å®<br>
+          ã»åé¨æ´»ã®æ´»ååå®¹ã¾ã¨ã<br>
+          ã»æ°è¦é¨å¡ã®åéä¿é²<br>
+          ã»ã¹ã±ã¸ã¥ã¼ã«èª¿æ´
         </div>
         <div style="margin-top:12px">
-          <span class="status-badge status-planning">ルール策定中</span>
+          <span class="status-badge status-planning">ã«ã¼ã«ç­å®ä¸­</span>
         </div>
       </div>
     </div>
@@ -935,13 +1036,13 @@
   <!-- ======== CLUBS ======== -->
   <div class="page" id="page-clubs">
     <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;flex-wrap:wrap;gap:8px">
-      <h2 style="font-size:16px;font-weight:700;color:var(--primary)">部活動一覧（24期データ → 25期引継ぎ）</h2>
+      <h2 style="font-size:16px;font-weight:700;color:var(--primary)">é¨æ´»åä¸è¦§ï¼24æãã¼ã¿ â 25æå¼ç¶ãï¼</h2>
       <div style="display:flex;gap:8px">
-        <a href="https://docs.google.com/spreadsheets/d/1UG5Kti2IrJFOg8UeUSP-ve9a1rR-Up2_/edit" target="_blank" class="zoom-btn" style="font-size:11px;padding:6px 12px;text-decoration:none">📊 部活スプレッドシート</a>
-        <button class="add-btn" onclick="openModal('club')">+ 部活を追加</button>
+        <a href="https://docs.google.com/spreadsheets/d/1UG5Kti2IrJFOg8UeUSP-ve9a1rR-Up2_/edit" target="_blank" class="zoom-btn" style="font-size:11px;padding:6px 12px;text-decoration:none">ð é¨æ´»ã¹ãã¬ããã·ã¼ã</a>
+        <button class="add-btn" onclick="openModal('club')">+ é¨æ´»ãè¿½å </button>
       </div>
     </div>
-    <p style="font-size:12px;color:#666;margin:-8px 0 16px">全16部活 ＋ TRES STELLAS FC｜25期での新設部活は「+ 部活を追加」から登録</p>
+    <p style="font-size:12px;color:#666;margin:-8px 0 16px">å¨16é¨æ´» ï¼ TRES STELLAS FCï½259¡ã§ã®æ°è¨­é¨æ´»ã¯ã+ é¨æ´»ãè¿½å ãããç»é²</p>
     <div class="grid-3" id="clubList"></div>
   </div>
 
@@ -949,8 +1050,8 @@
   <div class="page" id="page-todos">
     <div class="card">
       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px">
-        <div class="card-title" style="margin-bottom:0"><span class="icon">✅</span> アクションアイテム</div>
-        <button class="add-btn" onclick="openModal('todo')">+ TODOを追加</button>
+        <div class="card-title" style="margin-bottom:0"><span class="icon">â</span> ã¢ã¯ã·ã§ã³ã¢ã¤ãã </div>
+        <button class="add-btn" onclick="openModal('todo')">+ TODOãè¿½å </button>
       </div>
       <div id="todoList"></div>
     </div>
@@ -959,21 +1060,271 @@
   <!-- ======== MEMBERS ======== -->
   <div class="page" id="page-members">
     <div class="card">
-      <div class="card-title"><span class="icon">👥</span> チームメンバー（8名）</div>
+      <div class="card-title"><span class="icon">ð¥</span> ãã¼ã ã¡ã³ãã¼ï¼8åï¼</div>
       <div class="grid-4" id="memberList"></div>
     </div>
     <div class="card" style="margin-top:16px">
-      <div class="card-title"><span class="icon">💬</span> 連絡先</div>
+      <div class="card-title"><span class="icon">ð¬</span> é£çµ¡å</div>
       <div style="display:flex;gap:12px;flex-wrap:wrap">
         <a href="https://www.facebook.com/messages/t/1625819681754306" target="_blank" class="messenger-link">
-          Messengerスレッド
+          Messengerã¹ã¬ãã
         </a>
         <div style="font-size:13px;color:var(--text-light);display:flex;align-items:center">
-          📹 Zoom: 831 7132 7219（Pass: 3150）
+          ð¹ Zoom: 831 7132 7219ï¼Pass: 3150ï¼
         </div>
       </div>
     </div>
   </div>
+
+  <!-- ===== 7æã¤ãã³ãä¼ç» PAGE ===== -->
+  <div class="page" id="page-julyevent">
+    <!-- ä¼ç»ãããã¼ããã¼ -->
+    <div class="countdown-box" style="background:linear-gradient(135deg,#1a5c2a 0%,#2d8a42 50%,#e8b931 100%)">
+      <div class="countdown-label">25æ TRES STELLAS</div>
+      <div class="countdown-event">ðª 7æ å±ç¤ºä¼ãã«ã·ã§å å¯¾é¢ã¤ãã³ã</div>
+      <div class="countdown-days" id="julyEventCountdown"></div>
+      <div class="countdown-date">2026å¹´7æï¼å¹³æ¥ï¼æµèæ©ãã¥ã¼ãªãã¯ãã¼ã«</div>
+    </div>
+
+    <!-- éå¬æ¦è¦ -->
+    <div class="card">
+      <div class="card-title"><span class="icon">ð</span> éå¬æ¦è¦</div>
+      <table class="schedule-table">
+        <tr><th style="width:30%">é ç®</th><th>åå®¹</th></tr>
+        <tr><td style="font-weight:500">ã¤ãã³ãå</td><td>25æ TRES STELLAS å¯¾é¢ã¤ãã³ã</td></tr>
+        <tr><td style="font-weight:500">å½¢å¼</td><td>å±ç¤ºä¼ãã«ã·ã§å</td></tr>
+        <tr><td style="font-weight:500">éå¬ææ</td><td>2026å¹´7æ å¹³æ¥</td></tr>
+        <tr><td style="font-weight:500">éå¬æé</td><td>12:00ã19:00</td></tr>
+        <tr><td style="font-weight:500">ä¼å ´</td><td>æµèæ©ãã¥ã¼ãªãã¯ãã¼ã«ï¼ãã¼ã«ã®ã¿ä½¿ç¨ï¼</td></tr>
+        <tr><td style="font-weight:500">åº§å¸­</td><td>ååï¼å±ç¤ºä¸­å¿ ï¼ å¾åï¼æ¤å­ãåºãã¦èªç±çå¸­</td></tr>
+        <tr><td style="font-weight:500">ä¸»å¬</td><td>25æ TRES STELLAS å¯¾é¢ã¤ãã³ããã¼ã </td></tr>
+      </table>
+    </div>
+
+    <!-- éå¶ä½å¶ -->
+    <div class="grid-2" style="margin-top:16px">
+      <div class="card">
+        <div class="card-title"><span class="icon">ð¤</span> éå¶ä½å¶</div>
+        <div class="member-card" style="margin-bottom:8px">
+          <div class="member-avatar leader">å·</div>
+          <div><div class="member-name">å·ä¸ãã</div><div class="member-role">å¨ä½è²¬ä»»è</div></div>
+        </div>
+        <div class="member-card" style="margin-bottom:8px">
+          <div class="member-avatar">ç¥</div>
+          <div><div class="member-name">ç¥å±± å¥</div><div class="member-role">å¯è²¬ä»»è</div></div>
+        </div>
+        <div class="member-card" style="margin-bottom:8px">
+          <div class="member-avatar" style="background:#1565c0">æ°</div>
+          <div><div class="member-name">æ°äºç¾å¼å­ãã</div><div class="member-role">å¸ä¼é²è¡</div></div>
+        </div>
+        <div class="member-card">
+          <div class="member-avatar" style="background:#1565c0">å¤§</div>
+          <div><div class="member-name">å¤§ç£éç¾ãã</div><div class="member-role">å¸ä¼é²è¡</div></div>
+        </div>
+      </div>
+
+      <!-- åå è²» -->
+      <div class="card">
+        <div class="card-title"><span class="icon">ð°</span> åå è²»ã»æéè¨­è¨</div>
+        <table class="schedule-table">
+          <tr><th>åºå</th><th style="text-align:right">éé¡</th></tr>
+          <tr><td>ã¡ã³ãã¼åå </td><td style="text-align:right;color:#2e7d32;font-weight:700">ç¡æ</td></tr>
+          <tr><td>ãã¸ã¿ã¼åå </td><td style="text-align:right;color:#2e7d32;font-weight:700">ç¡æ</td></tr>
+          <tr><td>ã²ã¹ãåå </td><td style="text-align:right;color:#2e7d32;font-weight:700">ç¡æ</td></tr>
+          <tr><td>ãã¼ã¹åºåºæ</td><td style="text-align:right;font-weight:700">Â¥10,000 /ãã¼ã¹</td></tr>
+          <tr><td>ãã¼ã¹åºåºèè¿½å åå </td><td style="text-align:right;font-weight:700">Â¥5,000 /äºº</td></tr>
+        </table>
+      </div>
+    </div>
+
+    <!-- ã³ã³ã»ãã & ç®ç -->
+    <div class="card" style="margin-top:16px">
+      <div class="card-title"><span class="icon">ð¯</span> ã³ã³ã»ãã & éå¬ç®ç</div>
+      <div style="background:linear-gradient(135deg,var(--primary-dark),var(--primary));color:white;padding:16px 20px;border-radius:10px;margin-bottom:16px;font-size:15px;font-weight:700;text-align:center;letter-spacing:1px">
+        è¦ãã»ç¥ãã»è©±ãã»ä½é¨ããã»ç´æãçã¾ããå¯¾é¢ã¤ãã³ã
+      </div>
+      <div class="grid-2">
+        <div>
+          <div style="font-size:12px;font-weight:700;color:var(--primary);margin-bottom:6px">ä¸»ç®ç</div>
+          <div style="font-size:13px;line-height:2">
+            â æ°ã¡ã³ãã¼ãæ©ããã£ãã¿ã¼ã«é¦´æããå ´<br>
+            â ã¡ã³ãã¼åå£«ã®ä¿¡é ¼é¢ä¿ãæ·±ãã<br>
+            â ä»äºã»ååã»ãµã¼ãã¹ã®ä¾¡å¤ãå¯è¦å<br>
+            â ãã¸ããªãã£ã«ã¤ãªãããªã¢ã«ãªæ¥ç¹<br>
+            â ãã£ãã¿ã¼å¨ä½ã®æ´»æ§åã»ã·ã¼ãããªã¥ã¼åä¸
+          </div>
+        </div>
+        <div>
+          <div style="font-size:12px;font-weight:700;color:var(--warning);margin-bottom:6px">è£å©ç®ç</div>
+          <div style="font-size:13px;line-height:2">
+            ð¸ å±ç¤ºä¼å½¢å¼ã«æ£ãã<br>
+            ð¸ åºå±ããªã¢ã«åµæ¥­ã®ç·´ç¿ã®å ´<br>
+            ð¸ æ°æ§ã¡ã³ãã¼ã®ä¼è©±æ¥ç¹<br>
+            ð¸ æ¬¡ã®ç´æãé¢è«ã®ãã£ãã
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ã¿ã¤ã ãã¼ãã« -->
+    <div class="card" style="margin-top:16px">
+      <div class="card-title"><span class="icon">â°</span> æ¨å¥¨ã¿ã¤ã ãã¼ãã«</div>
+      <table class="schedule-table">
+        <tr><th style="width:20%">æé</th><th style="width:25%">åå®¹</th><th>è©³ç´°</th></tr>
+        <tr><td>12:00ã13:00</td><td>æ¬å¥ã»è¨­å¶</td><td style="font-size:12px;color:var(--text-light)">ãã¼ã¹è¨­å¶ãååéç½®ãåä»æºåãå°ç·ç¢ºèª</td></tr>
+        <tr><td>13:00ã13:20</td><td class="event">éä¼å¼</td><td style="font-size:12px">éä¼æ¨æ¶ãç®çèª¬æãã«ã¼ã«å±æãæµãèª¬æ</td></tr>
+        <tr><td>13:20ã15:20</td><td class="event" style="font-weight:700">å±ç¤ºä¼ãã«ã·ã§åå</td><td style="font-size:12px">ãã¼ã¹äº¤æµãä½é¨ãå®æ¼ãååºäº¤æãä»äºçè§£</td></tr>
+        <tr><td>15:20ã15:50</td><td class="event">ãã¼ã¹ä¸­å¤®PR</td><td style="font-size:12px">åºå±èã«ããä¸­å¤®PRããã¼ã¹ç´¹ä»</td></tr>
+        <tr><td>15:50ã16:00</td><td>ã¬ã¤ã¢ã¦ãåæ¿</td><td style="font-size:12px;color:var(--text-light)">æ¤å­ãåºãã¦èªç±çå¸­å½¢å¼ã¸ç§»è¡</td></tr>
+        <tr><td>16:00ã16:40</td><td class="event">ãããã³ã³ãã¹ã</td><td style="font-size:12px">10åæ³å®ã1äºº4åæç®ã§ç´40å</td></tr>
+        <tr><td>16:40ã17:10</td><td class="event">ãªã¢ã«æ¨è¦ã®è¨è</td><td style="font-size:12px">å½æ¥ä½é¨ããªã¢ã«ã§ããã§ããªãæ¨è¦ã®å±æ</td></tr>
+        <tr><td>17:10ã17:30</td><td class="event">æ°ã¡ã³ãã¼ç´¹ä»</td><td style="font-size:12px">1äºº30ç§ç¨åº¦ã§èªå·±ç´¹ä»</td></tr>
+        <tr><td>17:30ã18:10</td><td class="event" style="font-weight:700">å±ç¤ºä¼ãã«ã·ã§å¾å</td><td style="font-size:12px">æ°ã«ãªã£ãäººã¨ã®ä¼è©±ãæ¬¡ã®ç´æã¥ãã</td></tr>
+        <tr><td>18:10ã18:30</td><td class="event">ã¯ã­ã¼ã¸ã³ã°</td><td style="font-size:12px">ç·æ¬ãã¢ã³ã±ã¼ããå½æ¥ã®ç´æä»¶æ°ç¢ºèª</td></tr>
+        <tr><td>18:30ã19:00</td><td>æ¤å</td><td style="font-size:12px;color:var(--text-light)">çä»ããæ¬åº</td></tr>
+      </table>
+    </div>
+
+    <!-- ã³ã³ãã³ãè©³ç´° -->
+    <div class="card" style="margin-top:16px">
+      <div class="card-title"><span class="icon">ðª</span> ã¤ãã³ãã³ã³ãã³ãï¼6ãã­ã°ã©ã ï¼</div>
+      <div class="grid-3">
+        <div class="initiative-card">
+          <div class="initiative-number">PROGRAM 01</div>
+          <div class="initiative-title">éä¼å¼</div>
+          <div class="initiative-desc">è¶£æ¨å±æãåãæ¹èª¬æãã´ã¼ã«ã¯ãæ¬¡ã®ç´æã«ã¤ãªãããã¨ã</div>
+        </div>
+        <div class="initiative-card">
+          <div class="initiative-number">PROGRAM 02</div>
+          <div class="initiative-title">å±ç¤ºä¼ãã«ã·ã§</div>
+          <div class="initiative-desc">ååå±ç¤ºããµã¼ãã¹èª¬æãå®æ¼ãä½é¨ãç¸è«åä»ãååºäº¤æ</div>
+        </div>
+        <div class="initiative-card">
+          <div class="initiative-number">PROGRAM 03</div>
+          <div class="initiative-title">ãã¼ã¹ä¸­å¤®PR</div>
+          <div class="initiative-desc">åºå±èãä¸­å¤®ã§ç­ãPRããèª°ã«ä½ãæä¾ã§ãããããä¼ãã</div>
+        </div>
+        <div class="initiative-card">
+          <div class="initiative-number">PROGRAM 04</div>
+          <div class="initiative-title">ãããã³ã³ãã¹ã</div>
+          <div class="initiative-desc">åéå¶10åã1äºº3åãç­æéã§ä»äºã®ä¾¡å¤ãä¼ãã</div>
+        </div>
+        <div class="initiative-card">
+          <div class="initiative-number">PROGRAM 05</div>
+          <div class="initiative-title">ãªã¢ã«æ¨è¦ã®è¨è</div>
+          <div class="initiative-desc">å½æ¥ä½é¨ã«åºã¥ãæ¨è¦ãå¯¾é¢ã§ããã§ããªãä¿¡é ¼ã®å¯è¦å</div>
+        </div>
+        <div class="initiative-card">
+          <div class="initiative-number">PROGRAM 06</div>
+          <div class="initiative-title">æ°ã¡ã³ãã¼ç´¹ä»</div>
+          <div class="initiative-desc">1äºº30ç§ãé¡ã¨ååã¨ä»äºãç¥ã£ã¦ãããä¼è©±ã®ãã£ããã«</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- KPI -->
+    <div class="card" style="margin-top:16px">
+      <div class="card-title"><span class="icon">ð</span> KPIç®æ¨</div>
+      <div class="grid-4">
+        <div class="kpi-box">
+          <div class="kpi-label">æ°ã¡ã³ãã¼åå ç</div>
+          <div class="kpi-value">80<span class="kpi-unit">%</span></div>
+          <div class="kpi-sub">ä»¥ä¸</div>
+        </div>
+        <div class="kpi-box">
+          <div class="kpi-label">ã¡ã³ãã¼åå ç</div>
+          <div class="kpi-value">75<span class="kpi-unit">%</span></div>
+          <div class="kpi-sub">ä»¥ä¸</div>
+        </div>
+        <div class="kpi-box">
+          <div class="kpi-label">ãã¼ã¹åºå±æ°</div>
+          <div class="kpi-value">30</div>
+          <div class="kpi-sub">ãã¼ã¹</div>
+        </div>
+        <div class="kpi-box">
+          <div class="kpi-label">åå æºè¶³åº¦</div>
+          <div class="kpi-value">4.3<span class="kpi-unit">/5</span></div>
+          <div class="kpi-sub">ä»¥ä¸</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- äºç® -->
+    <div class="grid-2" style="margin-top:16px">
+      <div class="card">
+        <div class="card-title"><span class="icon">ð</span> æ¯åºæ³å®</div>
+        <table class="schedule-table">
+          <tr><th>é ç®</th><th style="text-align:right">éé¡</th></tr>
+          <tr><td>ä¼å ´è²»ï¼å¹³æ¥12-19æï¼</td><td style="text-align:right;font-weight:500">Â¥345,000</td></tr>
+          <tr><td>å°å·ç©ã»è£é£¾</td><td style="text-align:right;font-weight:500">Â¥200,000</td></tr>
+          <tr><td>è¨é²æ®å½±ã»åç</td><td style="text-align:right;font-weight:500">Â¥200,000</td></tr>
+          <tr><td>äºåè²»</td><td style="text-align:right;font-weight:500">Â¥150,000</td></tr>
+          <tr><td>é³é¿ã»ã¬ã¤ã¢ã¦ãè¿½å </td><td style="text-align:right;font-weight:500">Â¥75,000ã100,000</td></tr>
+          <tr style="background:#f0f5f0"><td style="font-weight:700">æ³å®ç·é¡</td><td style="text-align:right;font-weight:900;color:var(--primary)">ç´Â¥970,000ã995,000</td></tr>
+        </table>
+      </div>
+      <div class="card">
+        <div class="card-title"><span class="icon">ð</span> åå¥æ³å®</div>
+        <table class="schedule-table">
+          <tr><th>ã±ã¼ã¹</th><th style="text-align:right">éé¡</th></tr>
+          <tr><td>ãã¼ã¹åºå±æï¼30ÃÂ¥10,000ï¼</td><td style="text-align:right;font-weight:500">Â¥300,000</td></tr>
+          <tr><td>ï¼è¿½å åå 10äºº</td><td style="text-align:right">Â¥350,000</td></tr>
+          <tr><td>ï¼è¿½å åå 20äºº</td><td style="text-align:right">Â¥400,000</td></tr>
+          <tr><td>ï¼è¿½å åå 30äºº</td><td style="text-align:right">Â¥450,000</td></tr>
+          <tr style="background:#fff3e0"><td style="font-weight:700">ä¸è¶³è¦è¾¼ã¿</td><td style="text-align:right;font-weight:900;color:var(--warning)">ç´Â¥550,000ã650,000</td></tr>
+        </table>
+        <div style="margin-top:12px;font-size:12px;color:var(--text-light);line-height:1.8">
+          â» ãã¼ã¹åºåºèããã®ã¿åçãã¡ã³ãã¼ã»ãã¸ã¿ã¼ã»ã²ã¹ãã¯ç¡æåå 
+        </div>
+      </div>
+    </div>
+
+    <!-- åç¥æ¹é -->
+    <div class="card" style="margin-top:16px">
+      <div class="card-title"><span class="icon">ð£</span> åç¥æ¹é</div>
+      <table class="schedule-table">
+        <tr><th style="width:20%">ãã§ã¼ãº</th><th>åç¥åå®¹</th></tr>
+        <tr><td><span class="status-badge status-planning">äºåèªç¥</span></td><td>å¯¾é¢ã¤ãã³ããã¼ã ã®ç®çå±æ</td></tr>
+        <tr><td><span class="status-badge status-active">åééå§</span></td><td>ãã¼ã¹åºå±åéãç¡ææ¥å ´æ¡å</td></tr>
+        <tr><td><span class="status-badge status-upcoming">éå¬æ¥è¿</span></td><td>è¦ã©ãããããããæ¨è¦ãæ°ã¡ã³ãã¼ç´¹ä»æ¡å</td></tr>
+        <tr><td><span class="status-badge status-today">ç´å</span></td><td>æ¥å ´ä¿é²ãåºå±èç´¹ä»ãåå ã¡ãªããã®æç¢ºå</td></tr>
+      </table>
+    </div>
+
+    <!-- ä¼å ´ã¬ã¤ã¢ã¦ã -->
+    <div class="card" style="margin-top:16px">
+      <div class="card-title"><span class="icon">ðºï¸</span> ä¼å ´ã¬ã¤ã¢ã¦ãæ¹é</div>
+      <div class="grid-3">
+        <div style="background:#f0f5f0;border-radius:10px;padding:16px;text-align:center">
+          <div style="font-size:24px;margin-bottom:8px">ðª</div>
+          <div style="font-size:13px;font-weight:700;color:var(--primary)">å¤å¨ã»å·¦å³</div>
+          <div style="font-size:12px;color:var(--text-light);margin-top:4px">ãã¼ã¹åºå±ã¨ãªã¢</div>
+        </div>
+        <div style="background:#fff3e0;border-radius:10px;padding:16px;text-align:center">
+          <div style="font-size:24px;margin-bottom:8px">ð¤</div>
+          <div style="font-size:13px;font-weight:700;color:var(--warning)">ä¸­å¤®åæ¹</div>
+          <div style="font-size:12px;color:var(--text-light);margin-top:4px">éä¼å¼ã»ä¸­å¤®PRã»ãããã»æ¨è¦</div>
+        </div>
+        <div style="background:#e3f2fd;border-radius:10px;padding:16px;text-align:center">
+          <div style="font-size:24px;margin-bottom:8px">ðª</div>
+          <div style="font-size:13px;font-weight:700;color:var(--info)">å¾ååæ¿</div>
+          <div style="font-size:12px;color:var(--text-light);margin-top:4px">æ¤å­ãåºãã¦èªç±çå¸­å½¢å¼</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- æ³¨æç¹ -->
+    <div class="card" style="margin-top:16px">
+      <div class="card-title"><span class="icon">â ï¸</span> éå¶ä¸ã®æ³¨æç¹</div>
+      <div style="font-size:13px;line-height:2">
+        â¡ å±ç¤ºã ãã§çµãããªããã<strong>å¸ä¼é²è¡ãéè¦</strong><br>
+        â¡ ãããã¯<strong>æéç®¡çãå¿é </strong>ï¼1äºº3åå³å®ï¼<br>
+        â¡ ãªã¢ã«æ¨è¦ã¯ãã®å ´ã®æµããè¦ã¦<strong>ã¹ã ã¼ãºã«åã</strong><br>
+        â¡ æ°ã¡ã³ãã¼ç´¹ä»ãåãªãç´¹ä»ã§çµãããã<strong>ä¼è©±ã«ã¤ãªãã</strong>
+      </div>
+    </div>
+  </div>
+
 </div>
 
 <!-- Modals -->
@@ -987,7 +1338,13 @@ const STORE_KEY = 'tres25_event_team';
 
 function loadData() {
   const saved = localStorage.getItem(STORE_KEY);
-  if (saved) return JSON.parse(saved);
+  if (saved) {
+    const d = JSON.parse(saved);
+    const def = getDefaultData();
+    if (!d.announcements) d.announcements = def.announcements;
+    if (!d.specialEvents) d.specialEvents = def.specialEvents;
+    return d;
+  }
   return getDefaultData();
 }
 
@@ -999,89 +1356,105 @@ function getDefaultData() {
   return {
     kpi: { newSV: 0, totalSV: 0 },
     schedule: [
-      { date: '2026-04-08', day: '火', event: '定例朝礼', type: 'regular' },
-      { date: '2026-04-09', day: '木', event: 'リージョンフォーラム 〜プレジデント大いに語る〜', type: 'event' },
-      { date: '2026-04-15', day: '火', event: '定例朝礼', type: 'regular' },
-      { date: '2026-04-22', day: '火', event: '定例朝礼', type: 'regular' },
-      { date: '2026-04-28', day: '火', event: '休会（ナショナルカンファレンス）', type: 'holiday' },
-      { date: '2026-04-28', day: '火', event: 'ナショナルカンファレンス ＠東京ビッグサイト', type: 'event' },
-      { date: '2026-04-29', day: '水', event: 'ナショナルカンファレンス ＠東京ビッグサイト 2日目', type: 'event' },
-      { date: '2026-05-05', day: '火', event: '休会（こどもの日）', type: 'holiday' },
-      { date: '2026-05-13', day: '火', event: '定例朝礼', type: 'regular' },
-      { date: '2026-05-19', day: '火', event: 'モメンタム', type: 'event' },
-      { date: '2026-05-27', day: '火', event: '定例朝礼', type: 'regular' },
-      { date: '2026-06-03', day: '火', event: '定例朝礼', type: 'regular' },
-      { date: '2026-06-10', day: '火', event: '定例朝礼', type: 'regular' },
-      { date: '2026-06-17', day: '火', event: '定例朝礼', type: 'regular' },
-      { date: '2026-06-24', day: '火', event: '定例朝礼', type: 'regular' },
-      { date: '2026-07-01', day: '火', event: '定例朝礼', type: 'regular' },
-      { date: '2026-07-07', day: '火', event: '★ FEEL TRES STELLAS — 対面イベント＆BOD（リアル）', type: 'major' },
-      { date: '2026-07-14', day: '火', event: '定例朝礼', type: 'regular' },
-      { date: '2026-07-21', day: '火', event: '定例朝礼', type: 'regular' },
-      { date: '2026-07-28', day: '火', event: '定例朝礼', type: 'regular' },
-      { date: '2026-08-04', day: '火', event: '定例朝礼', type: 'regular' },
-      { date: '2026-08-11', day: '火', event: '休会（山の日）', type: 'holiday' },
-      { date: '2026-08-18', day: '火', event: '定例朝礼', type: 'regular' },
-      { date: '2026-08-25', day: '火', event: '定例朝礼', type: 'regular' },
-      { date: '2026-09-01', day: '火', event: '定例朝礼', type: 'regular' },
-      { date: '2026-09-03', day: '木', event: 'リージョン主催スーパーBOD', type: 'event' },
-      { date: '2026-09-08', day: '火', event: '定例朝礼', type: 'regular' },
-      { date: '2026-09-15', day: '火', event: '定例朝礼', type: 'regular' },
-      { date: '2026-09-22', day: '火', event: '休会（国民の休日）', type: 'holiday' },
-      { date: '2026-09-29', day: '火', event: '★ 感謝祭', type: 'major' },
+      { date: '2026-04-08', day: 'ç«', event: 'å®ä¾æç¤¼', type: 'regular' },
+      { date: '2026-04-09', day: 'æ¨', event: 'ãªã¼ã¸ã§ã³ãã©ã¼ã©ã  ããã¬ã¸ãã³ãå¤§ãã«èªãã', type: 'event' },
+      { date: '2026-04-15', day: 'ç«', event: 'å®ä¾æç¤¼', type: 'regular' },
+      { date: '2026-04-22', day: 'ç«', event: 'å®ä¾æç¤¼', type: 'regular' },
+      { date: '2026-04-28', day: 'ç«', event: 'ä¼ä¼ï¼ãã·ã§ãã«ã«ã³ãã¡ã¬ã³ã¹ï¼', type: 'holiday' },
+      { date: '2026-04-28', day: 'ç«', event: 'ãã·ã§ãã«ã«ã³ãã¡ã¬ã³ã¹ ï¼ æ±äº¬ããã°ãµã¤ã', type: 'event' },
+      { date: '2026-04-29', day: 'æ°´', event: 'ãã·ã§ãã«ã«ã³ãã¡ã¬ã³ã¹ ï¼ æ±äº¬ããã°ãµã¤ã 2æ¥ç®', type: 'event' },
+      { date: '2026-05-05', day: 'ç«', event: 'ä¼ä¼ï¼ãã©ãã®æ¥ï¼', type: 'holiday' },
+      { date: '2026-05-13', day: 'ç«', event: 'å®ä¾æç¤¼', type: 'regular' },
+      { date: '2026-05-19', day: 'ç«', event: 'ã¢ã¡ã³ã¿ã ', type: 'event' },
+      { date: '2026-05-27', day: 'ç«', event: 'å®ä¾æç¤¼', type: 'regular' },
+      { date: '2026-06-03', day: 'ç«', event: 'å®ä¾æç¤¼', type: 'regular' },
+      { date: '2026-06-10', day: 'ç«', event: 'å®ä¾æç¤¼', type: 'regular' },
+      { date: '2026-06-17', day: 'ç«', event: 'å®ä¾æç¤¼', type: 'regular' },
+      { date: '2026-06-24', day: 'ç«', event: 'å®ä¾æç¤¼', type: 'regular' },
+      { date: '2026-07-01', day: 'ç«', event: 'å®ä¾æç¤¼', type: 'regular' },
+      { date: '2026-07-07', day: 'ç«', event: 'â FEEL TRES STELLAS â å¯¾é¢ã¤ãã³ãï¼BODï¼ãªã¢ã«ï¼', type: 'major' },
+      { date: '2026-07-14', day: 'ç«', event: 'å®ä¾æç¤¼', type: 'regular' },
+      { date: '2026-07-21', day: 'ç«', event: 'å®ä¾æç¤¼', type: 'regular' },
+      { date: '2026-07-28', day: 'ç«', event: 'å®ä¾æç¤¼', type: 'regular' },
+      { date: '2026-08-04', day: 'ç«', event: 'å®ä¾æç¤¼', type: 'regular' },
+      { date: '2026-08-11', day: 'ç«', event: 'ä¼ä¼ï¼å±±ã®æ¥ï¼', type: 'holiday' },
+      { date: '2026-08-18', day: 'ç«', event: 'å®ä¾æç¤¼', type: 'regular' },
+      { date: '2026-08-25', day: 'ç«', event: 'å®ä¾æç¤¼', type: 'regular' },
+      { date: '2026-09-01', day: 'ç«', event: 'å®ä¾æç¤¼', type: 'regular' },
+      { date: '2026-09-03', day: 'æ¨', event: 'ãªã¼ã¸ã§ã³ä¸»å¬ã¹ã¼ãã¼BOD', type: 'event' },
+      { date: '2026-09-08', day: 'ç«', event: 'å®ä¾æç¤¼', type: 'regular' },
+      { date: '2026-09-15', day: 'ç«', event: 'å®ä¾æç¤¼', type: 'regular' },
+      { date: '2026-09-22', day: 'ç«', event: 'ä¼ä¼ï¼å½æ°ã®ä¼æ¥ï¼', type: 'holiday' },
+      { date: '2026-09-29', day: 'ç«', event: 'â æè¬ç¥­', type: 'major' },
     ],
     meetings: [
       {
         id: 'm1',
         date: '2026-04-06',
-        time: '15:34〜16:32',
+        time: '15:34ã16:32',
         type: 'Zoom',
-        title: '25期 対面イベントチーム初回定例',
-        agenda: 'KPI設定、施策共有（FEEL TRES STELLAS / 部活紹介タイム）、スローガン決定',
-        attendees: '川上、神山、高橋、他',
+        title: '25æ å¯¾é¢ã¤ãã³ããã¼ã ååå®ä¾',
+        agenda: 'KPIè¨­å®ãæ½ç­å±æï¼FEEL TRES STELLAS / é¨æ´»ç´¹ä»ã¿ã¤ã ï¼ãã¹ã­ã¼ã¬ã³æ±ºå®',
+        attendees: 'å·ä¸ãç¥å±±ãé«æ©ãä»',
         docLink: 'https://docs.google.com/document/d/1d6yFCYlpYQTNCNPUbJedul8JyE2f-4iBjY1r90vd0Oo/edit',
         decisions: [
-          'KPI：新人SV 500万円 / SV 1,000万円',
-          '施策①：7/7「FEEL TRES STELLAS」ブース出展イベント開催',
-          '施策②：部活紹介タイム導入（朝礼後・対面イベント時）',
-          'スローガン：「壊せ そして、剭れ、仲間の実りのために」— For The Members'
+          'KPIï¼æ°äººSV 500ä¸å / SV 1,000ä¸å',
+          'æ½ç­â ï¼7/7ãFEEL TRES STELLASããã¼ã¹åºå±ã¤ãã³ãéå¬',
+          'æ½ç­â¡ï¼é¨æ´»ç´¹ä»ã¿ã¤ã å°å¥ï¼æç¤¼å¾ã»å¯¾é¢ã¤ãã³ãæï¼',
+          'ã¹ã­ã¼ã¬ã³ï¼ãå£ã ããã¦ãåµããä»²éã®å®ãã®ããã«ãâ For The Members'
         ],
         confirmedBy: []
       }
     ],
     todos: [
-      { id: 1, title: '7/7 FEEL TRES STELLAS の詳細伂画を練る', assignee: '川上', due: '2026-05-19', priority: 'high', done: false },
-      { id: 2, title: 'ブース出展者の募集を開始する', assignee: '全員', due: '2026-05-31', priority: 'high', done: false },
-      { id: 3, title: '部活紹介タイムの運用ルールを策定する', assignee: '川上・神山', due: '2026-04-22', priority: 'mid', done: false },
-      { id: 4, title: '各部活の活動内容と代表者をまとめる', assignee: '全員', due: '2026-04-29', priority: 'mid', done: false },
+      { id: 1, title: '7/7 FEEL TRES STELLAS ã®è©³ç´°ä¼ç»ãç·´ã', assignee: 'å·ä¸', due: '2026-05-19', priority: 'high', done: false },
+      { id: 2, title: 'ãã¼ã¹åºå±èã®åéãéå§ãã', assignee: 'å¨å¡', due: '2026-05-31', priority: 'high', done: false },
+      { id: 3, title: 'é¨æ´»ç´¹ä»ã¿ã¤ã ã®éç¨ã«ã¼ã«ãç­å®ãã', assignee: 'å·ä¸ã»ç¥å±±', due: '2026-04-22', priority: 'mid', done: false },
+      { id: 4, title: 'åé¨æ´»ã®æ´»ååå®¹ã¨ä»£è¡¨èãã¾ã¨ãã', assignee: 'å¨å¡', due: '2026-04-29', priority: 'mid', done: false },
     ],
     clubs: [
-      { id: 1, name: '鰻部', leader: '星 泰衣', memberCount: 22, status: 'active' },
-      { id: 2, name: 'おっさんぽ部', leader: '鈴木 英明', memberCount: 18, status: 'active' },
-      { id: 3, name: 'ガンプラ部', leader: '竹房 裕貴', memberCount: 15, status: 'active' },
-      { id: 4, name: 'キャンプ部', leader: '入倉 大亮', memberCount: 20, status: 'active' },
-      { id: 5, name: '劇囥四季部', leader: '中島 美咲', memberCount: 16, status: 'active' },
-      { id: 6, name: 'ゴルフ部', leader: '(仮)安田 賥司', memberCount: 25, status: 'active' },
-      { id: 7, name: 'ゴーカート部', leader: '高橋 智之', memberCount: 18, status: 'active' },
-      { id: 8, name: 'サウナ部', leader: '原田 溛一郎', memberCount: 20, status: 'active' },
-      { id: 9, name: '写真部', leader: '森脇 剛', memberCount: 15, status: 'active' },
-      { id: 10, name: '魢グルメ部', leader: '日量 元太', memberCount: 22, status: 'active' },
-      { id: 11, name: '釣り部', leader: '石川 源起', memberCount: 18, status: 'active' },
-      { id: 12, name: '蹴球部', leader: '飯塚 智貴', memberCount: 20, status: 'active' },
-      { id: 13, name: '旅行部', leader: '須藤 久美子', memberCount: 14, status: 'active' },
-      { id: 14, name: 'ワイン部', leader: '日原 聡一郎', memberCount: 16, status: 'active' },
-      { id: 15, name: 'one piece座談部', leader: '伊藤 将太郎', memberCount: 18, status: 'active' },
-      { id: 16, name: 'TRES STELLAS FC', leader: '甲田 めぐみ', memberCount: 12, desc: 'サッカー/ソサイチ/フットサル', status: 'active' },
+      { id: 1, name: 'é°»é¨', leader: 'æ æ³°è¡£', memberCount: 22, status: 'active' },
+      { id: 2, name: 'ãã£ããã½é¨', leader: 'é´æ¨ è±æ', memberCount: 18, status: 'active' },
+      { id: 3, name: 'ã¬ã³ãã©é¨', leader: 'ç«¹æ¿ è£è²´', memberCount: 15, status: 'active' },
+      { id: 4, name: 'ã­ã£ã³ãé¨', leader: 'å¥å å¤§äº®', memberCount: 20, status: 'active' },
+      { id: 5, name: 'åå£åå­£é¨', leader: 'ä¸­å³¶ ç¾å²', memberCount: 16, status: 'active' },
+      { id: 6, name: 'ã´ã«ãé¨', leader: '(ä»®)å®ç° è³¢å¸', memberCount: 25, status: 'active' },
+      { id: 7, name: 'ã´ã¼ã«ã¼ãé¨', leader: 'é«æ© æºä¹', memberCount: 18, status: 'active' },
+      { id: 8, name: 'ãµã¦ãé¨', leader: 'åç° æºä¸é', memberCount: 20, status: 'active' },
+      { id: 9, name: 'åçé¨', leader: 'æ£®è å', memberCount: 15, status: 'active' },
+      { id: 10, name: 'é®ªã°ã«ã¡é¨', leader: 'æ¥é åå¤ª', memberCount: 22, status: 'active' },
+      { id: 11, name: 'é£ãé¨', leader: 'ç³å· æºèµ·', memberCount: 18, status: 'active' },
+      { id: 12, name: 'è¹´çé¨', leader: 'é£¯å¡ æºè²´', memberCount: 20, status: 'active' },
+      { id: 13, name: 'æè¡é¨', leader: 'é è¤ ä¹ç¾å­', memberCount: 14, status: 'active' },
+      { id: 14, name: 'ã¯ã¤ã³é¨', leader: 'æ¥å è¡ä¸é', memberCount: 16, status: 'active' },
+      { id: 15, name: 'one pieceåº§è«é¨', leader: 'ä¼è¤ å°å¤ªé', memberCount: 18, status: 'active' },
+      { id: 16, name: 'TRES STELLAS FC', leader: 'ç°ç° ããã¿', memberCount: 12, desc: 'ãµãã«ã¼/ã½ãµã¤ã/ããããµã«', status: 'active' },
     ],
     members: [
-      { name: '川上 宏光', role: '対面イベント委員長（グループ作成者）', initials: '川', leader: true },
-      { name: '高橋 智之', role: 'メンバー', initials: '高' },
-      { name: '神山 健', role: 'メンバー', initials: '神' },
-      { name: 'Saki Yagishita', role: 'メンバー', initials: 'S' },
-      { name: '伊藤 茁紀', role: 'メンバー', initials: '伊' },
-      { name: '新野見 博子', role: 'メンバー', initials: '新' },
-      { name: '多田 亜樹博', role: 'メンバー', initials: '多' },
-      { name: '大竹 勝美', role: 'メンバー', initials: '大' },
+      { name: 'å·ä¸ å®å', role: 'å¯¾é¢ã¤ãã³ãå§å¡é·ï¼ã°ã«ã¼ãä½æèï¼', initials: 'å·', leader: true },
+      { name: 'é«æ© æºä¹', role: 'ã¡ã³ãã¼', initials: 'é«' },
+      { name: 'ç¥å±± å¥', role: 'ã¡ã³ãã¼', initials: 'ç¥' },
+      { name: 'Saki Yagishita', role: 'ã¡ã³ãã¼ï¼æç¤¼çºè¡¨æå½ï¼', initials: 'S' },
+      { name: 'ä¼è¤ èç´', role: 'ã¡ã³ãã¼', initials: 'ä¼' },
+      { name: 'æ°éè¦ åå­', role: 'ã¡ã³ãã¼ï¼æç¤¼çºè¡¨æå½ï¼', initials: 'æ°' },
+      { name: 'å¤ç° äºæ¨¹å', role: 'ã¡ã³ãã¼', initials: 'å¤' },
+      { name: 'å¤§ç«¹ åç¾', role: 'ã¡ã³ãã¼', initials: 'å¤§' },
+    ],
+    announcements: [
+      { id: 'a1', date: '2026-04-07', presenter: 'æ°éè¦ åå­', category: 'other', content: '25æå¯¾é¢ã¤ãã³ããã¼ã ã®æ´»åæ¹éã»ä»æã®åãçµã¿èª¬æ', status: 'done' },
+      { id: 'a2', date: '2026-04-14', presenter: 'Saki Yagishita', category: 'club', content: 'é¨æ´»åã®ç´¹ä»ã¨æ°ã¡ã³ãã¼åå å¼ã³ãã', status: 'planned' },
+      { id: 'a3', date: '2026-04-22', presenter: 'æ°éè¦ åå­', category: 'club', content: 'é¨æ´»åç´¹ä»ã¿ã¤ã ã®æ¡åï¼10ææ ä¼ç»ã®åç¥ï¼', status: 'planned' },
+      { id: 'a4', date: '2026-05-13', presenter: 'Saki Yagishita', category: 'event', content: 'FEEL TRES STELLAS ãã¼ã¹åºå±èã®åééå§åç¥', status: 'planned' },
+      { id: 'a5', date: '2026-05-27', presenter: 'æ°éè¦ åå­', category: 'exhibitor', content: 'åºå±èèª¬æä¼ã®æ¡å', status: 'planned' },
+      { id: 'a6', date: '2026-06-03', presenter: 'Saki Yagishita', category: 'event', content: 'FEEL TRES STELLAS åºå±ç¶æ³ã¢ãããã¼ã', status: 'planned' },
+      { id: 'a7', date: '2026-06-10', presenter: 'æ°éè¦ åå­', category: 'event', content: 'FEEL TRES STELLAS ãã¸ã¿ã¼æå¾ã®å¼ã³ãã', status: 'planned' },
+      { id: 'a8', date: '2026-06-17', presenter: 'Saki Yagishita', category: 'event', content: 'FEEL TRES STELLAS ä¼å ´ã¬ã¤ã¢ã¦ãã»å½æ¥ã®æµãèª¬æ', status: 'planned' },
+      { id: 'a9', date: '2026-06-24', presenter: 'æ°éè¦ åå­', category: 'pitch', content: 'ãããã³ã³ãã¹ãæ¡å', status: 'planned' },
+      { id: 'a10', date: '2026-07-01', presenter: 'Saki Yagishita', category: 'event', content: 'FEEL TRES STELLAS æçµæ¡åã»æã¡ç©ã»éåæé', status: 'planned' },
+    ],
+    specialEvents: [
+      { id: 'se1', type: 'clubIntro', title: 'é¨æ´»åç´¹ä»ã¿ã¤ã¢', date: '', slot: '10:00-11:00', desc: 'å®ä¾ä¼å¾ã®10ææ ã§åé¨æ´»ã®ä»£è¡¨èãæ´»ååå®¹ããã¬ã¼ã³ãä»ãã¼ã ã®ã¤ãã³ãã¨è¢«ããªãæ¥ç¨ã§1åå®æ½', status: 'planning' },
+      { id: 'se2', type: 'exhibitorBriefing', title: 'åºå±èèª¬æä¼', date: '', timeSlot: 'å¤', desc: 'FEEL TRES STELLASã®ãã¼ã¹åºå±èåãèª¬æä¼ãåºå±èã®ã¿å¯¾è±¡ããã¼ã¹ã®ä½ãæ¹ã»å½æ¥ã®æµãã»æ³¨æäºé ãå±æ', status: 'planning' },
     ]
   };
 }
@@ -1126,13 +1499,13 @@ function renderCountdown() {
   if (next) {
     const days = daysUntil(next.date);
     box.innerHTML = `
-      <div class="countdown-label">次の主要イベントまで</div>
-      <div class="countdown-event">${next.event.replace('★ ','')}</div>
-      <div class="countdown-days">${days}<span> 日</span></div>
-      <div class="countdown-date">${next.date}（${next.day}）</div>
+      <div class="countdown-label">æ¬¡ã®ä¸»è¦ã¤ãã³ãã¾ã§</div>
+      <div class="countdown-event">${next.event.replace('â ','')}</div>
+      <div class="countdown-days">${days}<span> æ¥</span></div>
+      <div class="countdown-date">${next.date}ï¼${next.day}ï¼</div>
     `;
   } else {
-    box.innerHTML = '<div class="countdown-label">今期の全イベント完了！</div>';
+    box.innerHTML = '<div class="countdown-label">ä»æã®å¨ã¤ãã³ãå®äºï¼</div>';
   }
 }
 
@@ -1148,7 +1521,7 @@ function renderTermProgress() {
     <div class="progress-bar" style="height:14px;margin:12px 0">
       <div class="progress-fill" style="width:${pct}%"></div>
     </div>
-    <div class="term-progress-text">25期進行率: ${pct}%（2026年4月〜9月）</div>
+    <div class="term-progress-text">25æé²è¡ç: ${pct}%ï¼2026å¹´4æã9æï¼</div>
   `;
 }
 
@@ -1182,12 +1555,12 @@ function renderRecentTodos() {
   document.getElementById('recentTodos').innerHTML = pending.map(t => `
     <div style="display:flex;align-items:center;gap:8px;padding:8px 0;border-bottom:1px solid var(--border)">
       <span class="todo-priority ${t.priority === 'high' ? 'priority-high' : t.priority === 'mid' ? 'priority-mid' : 'priority-low'}">${
-        t.priority === 'high' ? '高' : t.priority === 'mid' ? '中' : '低'
+        t.priority === 'high' ? 'é«' : t.priority === 'mid' ? 'ä¸­' : 'ä½'
       }</span>
       <span style="font-size:13px;flex:1">${t.title}</span>
       <span style="font-size:11px;color:var(--text-light)">${formatDate(t.due)}</span>
     </div>
-  `).join('') || '<p style="font-size:13px;color:var(--text-light)">全て完了！</p>';
+  `).join('') || '<p style="font-size:13px;color:var(--text-light)">å¨ã¦å®äºï¼</p>';
 }
 
 function renderSchedule() {
@@ -1196,10 +1569,10 @@ function renderSchedule() {
     .filter(s => s.type !== 'regular')
     .map(s => {
       let statusClass = 'status-upcoming';
-      let statusText = '予定';
-      if (s.date < today) { statusClass = 'status-done'; statusText = '完了'; }
-      else if (s.date === today) { statusClass = 'status-today'; statusText = '本日'; }
-      if (s.type === 'holiday') { statusClass = 'status-holiday'; statusText = '休会'; }
+      let statusText = 'äºå®';
+      if (s.date < today) { statusClass = 'status-done'; statusText = 'å®äº'; }
+      else if (s.date === today) { statusClass = 'status-today'; statusText = 'æ¬æ¥'; }
+      if (s.type === 'holiday') { statusClass = 'status-holiday'; statusText = 'ä¼ä¼'; }
 
       return `<tr>
         <td style="font-weight:500">${s.date}</td>
@@ -1218,11 +1591,11 @@ function renderMeetings() {
   const daysToTue = dayOfWeek <= 2 ? (2 - dayOfWeek) : (9 - dayOfWeek);
   next.setDate(next.getDate() + (daysToTue === 0 && today.getHours() >= 10 ? 7 : daysToTue));
   const nextStr = next.toISOString().split('T')[0];
-  document.getElementById('nextMeetingDate').textContent = `${next.getMonth()+1}/${next.getDate()}（火）09:45`;
+  document.getElementById('nextMeetingDate').textContent = `${next.getMonth()+1}/${next.getDate()}ï¼ç«ï¼09:45`;
 
   const daysLeft = daysUntil(nextStr);
   document.getElementById('nextMeetingCountdown').textContent =
-    daysLeft === 0 ? '本日！' : `あと${daysLeft}日`;
+    daysLeft === 0 ? 'æ¬æ¥ï¼' : `ãã¨${daysLeft}æ¥`;
 
   const allMembers = data.members.map(m => m.name);
 
@@ -1242,7 +1615,7 @@ function renderMeetings() {
             <span class="meeting-time">${m.time} / ${m.type}</span>
           </div>
           <div style="display:flex;align-items:center;gap:8px">
-            ${m.docLink ? `<a href="${m.docLink}" target="_blank" class="doc-link-btn">📄 議事録Doc</a>` : `<button class="doc-link-add" onclick="addDocLink('${m.id}')">+ 議事録リンク</button>`}
+            ${m.docLink ? `<a href="${m.docLink}" target="_blank" class="doc-link-btn">ð è­°äºé²Doc</a>` : `<button class="doc-link-add" onclick="addDocLink('${m.id}')">+ è­°äºé²ãªã³ã¯</button>`}
             <span style="font-size:11px;color:var(--text-light)">${m.attendees}</span>
           </div>
         </div>
@@ -1251,22 +1624,22 @@ function renderMeetings() {
 
         ${(m.decisions && m.decisions.length > 0) ? `
         <div class="decisions-box">
-          <div class="decisions-title">📋 決定事項・榡要</div>
-          ${m.decisions.map(d => `<div class="decision-item">・${d}</div>`).join('')}
+          <div class="decisions-title">ð æ±ºå®äºé ã»æ¦è¦</div>
+          ${m.decisions.map(d => `<div class="decision-item">ã»${d}</div>`).join('')}
         </div>
         ` : ''}
 
         <div class="confirm-section">
           <div class="confirm-header">
-            <span class="confirm-label">確認済み ${confirmCount}/${totalMembers}</span>
+            <span class="confirm-label">ç¢ºèªæ¸ã¿ ${confirmCount}/${totalMembers}</span>
             <div class="confirm-bar"><div class="confirm-fill" style="width:${confirmPct}%"></div></div>
           </div>
           <div class="confirm-avatars">
             ${allMembers.map(name => {
               const isConfirmed = confirmed.includes(name);
               const initial = name.charAt(0);
-              return `<div class="confirm-avatar ${isConfirmed ? 'confirmed' : ''}" onclick="toggleConfirm('${m.id}','${name}')" title="${name}${isConfirmed ? ' ✓確認済み' : ' 未確認'}">
-                ${initial}${isConfirmed ? '<span class="check-mark">✓</span>' : ''}
+              return `<div class="confirm-avatar ${isConfirmed ? 'confirmed' : ''}" onclick="toggleConfirm('${m.id}','${name}')" title="${name}${isConfirmed ? ' âç¢ºèªæ¸ã¿' : ' æªç¢ºèª'}">
+                ${initial}${isConfirmed ? '<span class="check-mark">â</span>' : ''}
               </div>`;
             }).join('')}
           </div>
@@ -1285,15 +1658,15 @@ function renderTodos() {
   document.getElementById('todoList').innerHTML = sorted.map(t => `
     <div class="todo-item">
       <div class="todo-checkbox ${t.done ? 'checked' : ''}" onclick="toggleTodo(${t.id})">
-        ${t.done ? '✓' : ''}
+        ${t.done ? 'â' : ''}
       </div>
       <div class="todo-content">
         <div class="todo-title ${t.done ? 'done' : ''}">${t.title}</div>
         <div class="todo-meta">
           <span class="todo-priority ${t.priority === 'high' ? 'priority-high' : t.priority === 'mid' ? 'priority-mid' : 'priority-low'}">${
-            t.priority === 'high' ? '高' : t.priority === 'mid' ? '中' : '低'
+            t.priority === 'high' ? 'é«' : t.priority === 'mid' ? 'ä¸­' : 'ä½'
           }</span>
-          担当: ${t.assignee} ／ 期限: ${t.due}
+          æå½: ${t.assignee} ï¼ æé: ${t.due}
         </div>
       </div>
     </div>
@@ -1306,12 +1679,12 @@ function renderClubs() {
       <div class="club-name">${c.name}</div>
       ${c.desc ? `<div class="club-desc">${c.desc}</div>` : ''}
       <div style="margin-top:6px;font-size:12px;color:#555">
-        <span style="display:inline-block;margin-right:12px">👑 部長: <strong>${c.leader}</strong></span>
+        <span style="display:inline-block;margin-right:12px">ð é¨é·: <strong>${c.leader}</strong></span>
       </div>
-      <div class="club-members" style="margin-top:4px">👥 ${c.memberCount || 0}名参加</div>
+      <div class="club-members" style="margin-top:4px">ð¥ ${c.memberCount || 0}ååå </div>
       <div style="margin-top:8px;display:flex;align-items:center;gap:8px">
         <span class="status-badge status-${c.status}">${
-          c.status === 'active' ? '活動中' : c.status === 'planning' ? '準備中' : 'アイデア'
+          c.status === 'active' ? 'æ´»åä¸­' : c.status === 'planning' ? 'æºåä¸­' : 'ã¢ã¤ãã¢'
         }</span>
       </div>
     </div>
@@ -1343,7 +1716,7 @@ function toggleTodo(id) {
 }
 
 function addDocLink(meetingId) {
-  const url = prompt('議事録 Google Doc の URL を入力してください:');
+  const url = prompt('è­°äºé² Google Doc ã® URL ãå¥åãã¦ãã ãã:');
   if (url && url.trim()) {
     const meeting = data.meetings.find(m => m.id === meetingId);
     if (meeting) {
@@ -1376,97 +1749,139 @@ function openModal(type) {
 
   if (type === 'todo') {
     content.innerHTML = `
-      <h3>TODOを追加</h3>
+      <h3>TODOãè¿½å </h3>
       <div class="form-group">
-        <label>タイトル</label>
-        <input type="text" id="todoTitle" placeholder="例: ブース配置図を作成">
+        <label>ã¿ã¤ãã«</label>
+        <input type="text" id="todoTitle" placeholder="ä¾: ãã¼ã¹éç½®å³ãä½æ">
       </div>
       <div class="form-group">
-        <label>担当者</label>
-        <input type="text" id="todoAssignee" placeholder="例: 川上">
+        <label>æå½è</label>
+        <input type="text" id="todoAssignee" placeholder="ä¾: å·ä¸">
       </div>
       <div class="form-group">
-        <label>期限</label>
+        <label>æé</label>
         <input type="date" id="todoDue">
       </div>
       <div class="form-group">
-        <label>優先度</label>
+        <label>åªååº¦</label>
         <select id="todoPriority">
-          <option value="high">高</option>
-          <option value="mid" selected>中</option>
-          <option value="low">低</option>
+          <option value="high">é«</option>
+          <option value="mid" selected>ä¸­</option>
+          <option value="low">ä½</option>
         </select>
       </div>
       <div class="modal-actions">
-        <button class="btn-cancel" onclick="closeModal()">キャンセル</button>
-        <button class="add-btn" onclick="addTodo()">追加</button>
+        <button class="btn-cancel" onclick="closeModal()">ã­ã£ã³ã»ã«</button>
+        <button class="add-btn" onclick="addTodo()">è¿½å </button>
       </div>
     `;
   } else if (type === 'meeting') {
     content.innerHTML = `
-      <h3>会議記録を追加</h3>
+      <h3>ä¼è­°è¨é²ãè¿½å </h3>
       <div class="form-group">
-        <label>日付</label>
+        <label>æ¥ä»</label>
         <input type="date" id="mtgDate">
       </div>
       <div class="form-group">
-        <label>時間</label>
-        <input type="text" id="mtgTime" placeholder="例: 09:45〜10:00">
+        <label>æé</label>
+        <input type="text" id="mtgTime" placeholder="ä¾: 09:45ã10:00">
       </div>
       <div class="form-group">
-        <label>形式</label>
+        <label>å½¢å¼</label>
         <select id="mtgType">
           <option>Zoom</option>
-          <option>対面</option>
+          <option>å¯¾é¢</option>
         </select>
       </div>
       <div class="form-group">
-        <label>タイトル</label>
-        <input type="text" id="mtgTitle" placeholder="例: 第2回定例">
+        <label>ã¿ã¤ãã«</label>
+        <input type="text" id="mtgTitle" placeholder="ä¾: ç¬¬2åå®ä¾">
       </div>
       <div class="form-group">
-        <label>議題・内容</label>
-        <textarea id="mtgAgenda" rows="3" placeholder="議題や決定事項を記入"></textarea>
+        <label>è­°é¡ã»åå®¹</label>
+        <textarea id="mtgAgenda" rows="3" placeholder="è­°é¡ãæ±ºå®äºé ãè¨å¥"></textarea>
       </div>
       <div class="form-group">
-        <label>参加者</label>
-        <input type="text" id="mtgAttendees" placeholder="例: 川上、神山、高橋">
+        <label>åå è</label>
+        <input type="text" id="mtgAttendees" placeholder="ä¾: å·ä¸ãç¥å±±ãé«æ©">
       </div>
       <div class="form-group">
-        <label>決定事項・概要（1行ずつ入力）</label>
-        <textarea id="mtgDecisions" rows="4" placeholder="KPI設定：新人SV500万&#10;ブース出展を7/7に実施&#10;（1行＝1項目で入力）"></textarea>
+        <label>æ±ºå®äºé ã»æ¦è¦ï¼1è¡ãã¤å¥åï¼</label>
+        <textarea id="mtgDecisions" rows="4" placeholder="KPIè¨­å®ï¼æ°äººSV500ä¸&#10;ãã¼ã¹åºå±ã7/7ã«å®æ½&#10;ï¼1è¡ï¼1é ç®ã§å¥åï¼"></textarea>
       </div>
       <div class="form-group">
-        <label>議事録 Google Doc URL（任意）</label>
+        <label>è­°äºé² Google Doc URLï¼ä»»æï¼</label>
         <input type="url" id="mtgDocLink" placeholder="https://docs.google.com/document/d/...">
       </div>
       <div class="modal-actions">
-        <button class="btn-cancel" onclick="closeModal()">キャンセル</button>
-        <button class="add-btn" onclick="addMeeting()">追加</button>
+        <button class="btn-cancel" onclick="closeModal()">ã­ã£ã³ã»ã«</button>
+        <button class="add-btn" onclick="addMeeting()">è¿½å </button>
       </div>
     `;
   } else if (type === 'club') {
     content.innerHTML = `
-      <h3>部活を追加</h3>
+      <h3>é¨æ´»ãè¿½å </h3>
       <div class="form-group">
-        <label>部活名</label>
-        <input type="text" id="clubName" placeholder="例: ランニング部">
+        <label>é¨æ´»å</label>
+        <input type="text" id="clubName" placeholder="ä¾: ã©ã³ãã³ã°é¨">
       </div>
       <div class="form-group">
-        <label>部長</label>
-        <input type="text" id="clubLeader" placeholder="例: 神山 健">
+        <label>é¨é·</label>
+        <input type="text" id="clubLeader" placeholder="ä¾: ç¥å±± å¥">
       </div>
       <div class="form-group">
-        <label>活動内容（任意）</label>
-        <input type="text" id="clubDesc" placeholder="例: 毎月1回のランニングイベント">
+        <label>æ´»ååå®¹ï¼ä»»æï¼</label>
+        <input type="text" id="clubDesc" placeholder="ä¾: æ¯æ1åã®ã©ã³ãã³ã°ã¤ãã³ã">
       </div>
       <div class="form-group">
-        <label>メンバー数</label>
-        <input type="number" id="clubMemberCount" placeholder="例: 10" min="1">
+        <label>ã¡ã³ãã¼æ°</label>
+        <input type="number" id="clubMemberCount" placeholder="ä¾: 10" min="1">
       </div>
       <div class="modal-actions">
-        <button class="btn-cancel" onclick="closeModal()">キャンセル</button>
-        <button class="add-btn" onclick="addClub()">追加</button>
+        <button class="btn-cancel" onclick="closeModal()">ã­ã£ã³ã»ã«</button>
+        <button class="add-btn" onclick="addClub()">è¿½å </button>
+      </div>
+    `;
+  } else if (type === 'announcement') {
+    const presenters = data.members.filter(m => m.role.includes('æç¤¼çºè¡¨æå½'));
+    content.innerHTML = `
+      <h3>æç¤¼çºè¡¨ãè¿½å ã»ç·¨é</h3>
+      <input type="hidden" id="annEditId" value="">
+      <div class="form-group">
+        <label>æ¥ä»ï¼ç«ææ¥ï¼</label>
+        <input type="date" id="annDate">
+      </div>
+      <div class="form-group">
+        <label>çºè¡¨è</label>
+        <select id="annPresenter">
+          ${presenters.map(p => `<option value="${p.name}">${p.name}</option>`).join('')}
+        </select>
+      </div>
+      <div class="form-group">
+        <label>ã«ãã´ãª</label>
+        <select id="annCategory">
+          <option value="event">å¯¾é¢ã¤ãã³ãæ¡å</option>
+          <option value="pitch">ãããã³ã³ãã¹ãæ¡å</option>
+          <option value="club">é¨æ´»åæ¡å</option>
+          <option value="exhibitor">åºå±èèª¬æä¼æ¡å</option>
+          <option value="other">ãã®ä»</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>çºè¡¨åå®¹</label>
+        <textarea id="annContent" rows="3" placeholder="ä¾: FEEL TRES STELLAS ã®ãã¼ã¹åºå±èåéã«ã¤ãã¦"></textarea>
+      </div>
+      <div class="form-group">
+        <label>ã¹ãã¼ã¿ã¹</label>
+        <select id="annStatus">
+          <option value="planned">äºå®</option>
+          <option value="preparing">æºåä¸­</option>
+          <option value="done">å®äº</option>
+        </select>
+      </div>
+      <div class="modal-actions">
+        <button class="btn-cancel" onclick="closeModal()">ã­ã£ã³ã»ã«</button>
+        <button class="add-btn" onclick="saveAnnouncement()">ä¿å­</button>
       </div>
     `;
   }
@@ -1484,8 +1899,8 @@ function addTodo() {
   data.todos.push({
     id: Date.now(),
     title,
-    assignee: document.getElementById('todoAssignee').value || '未定',
-    due: document.getElementById('todoDue').value || '未定',
+    assignee: document.getElementById('todoAssignee').value || 'æªå®',
+    due: document.getElementById('todoDue').value || 'æªå®',
     priority: document.getElementById('todoPriority').value,
     done: false
   });
@@ -1540,7 +1955,172 @@ document.getElementById('modalOverlay').addEventListener('click', (e) => {
   if (e.target === e.currentTarget) closeModal();
 });
 
+// ===== CHOREI (æç¤¼çºè¡¨) =====
+const CAT_LABELS = { event: 'å¯¾é¢ã¤ãã³ãæ¡å', pitch: 'ãããã³ã³ãã¹ãæ¡å', club: 'é¨æ´»åæ¡å', exhibitor: 'åºå±èèª¬æä¼æ¡å', other: 'ãã®ä»' };
+const CAT_CLASSES = { event: 'cat-event', pitch: 'cat-pitch', club: 'cat-club', exhibitor: 'cat-exhibitor', other: 'cat-other' };
+const STATUS_LABELS = { planned: 'äºå®', preparing: 'æºåä¸­', done: 'å®äº' };
+
+function getThisWeekTuesday() {
+  const now = new Date();
+  const day = now.getDay();
+  const diff = day <= 2 ? 2 - day : 9 - day;
+  const tue = new Date(now);
+  tue.setDate(now.getDate() + diff);
+  return tue.toISOString().split('T')[0];
+}
+
+function renderChorei() {
+  // 7/7 Banner
+  const banner = document.getElementById('choreiBanner');
+  const daysTo77 = Math.ceil((new Date('2026-07-07') - new Date()) / 86400000);
+  if (daysTo77 > 0 && daysTo77 <= 28) {
+    banner.innerHTML = `<div class="chorei-banner">ð¯ FEEL TRES STELLAS (7/7) ã¾ã§ãã¨<strong>${daysTo77}æ¥</strong>ï¼æç¤¼ã§ã®åç¥ãå¼·åãã¾ããã</div>`;
+  } else { banner.innerHTML = ''; }
+
+  // This week
+  const thisTue = getThisWeekTuesday();
+  const thisAnn = data.announcements.find(a => a.date === thisTue);
+  const tw = document.getElementById('choreiThisWeek');
+  if (thisAnn) {
+    const initial = thisAnn.presenter.charAt(0) === 'S' ? 'S' : thisAnn.presenter.charAt(0);
+    tw.innerHTML = `
+      <div class="label">ð¤ ä»é±ã®æç¤¼çºè¡¨ï¼ç«æ 6:40ãï¼</div>
+      <div class="topic">${thisAnn.content}</div>
+      <div class="presenter-row">
+        <div class="presenter-avatar">${initial}</div>
+        <span>${thisAnn.presenter}</span>
+        <span class="cat-badge ${CAT_CLASSES[thisAnn.category]}">${CAT_LABELS[thisAnn.category]}</span>
+      </div>
+      <div style="margin-top:12px"><button class="add-btn" onclick="editAnnouncement('${thisAnn.id}')" style="background:var(--accent);color:var(--primary-dark)">âï¸ ç·¨é</button></div>
+    `;
+  } else {
+    tw.innerHTML = `
+      <div class="label">ð¤ ä»é±ã®æç¤¼çºè¡¨ï¼ç«æ 6:40ãï¼</div>
+      <div class="topic" style="opacity:0.6">ã¾ã ç»é²ããã¦ãã¾ãã</div>
+      <button class="add-btn" onclick="openModal('announcement')" style="margin-top:12px;background:var(--accent);color:var(--primary-dark)">+ ä»é±ã®çºè¡¨ãç»é²</button>
+    `;
+  }
+
+  // Presenters
+  const pl = document.getElementById('choreiPresenterList');
+  const presenters = data.members.filter(m => m.role.includes('æç¤¼çºè¡¨æå½'));
+  pl.innerHTML = presenters.map(p => `
+    <div style="display:flex;align-items:center;gap:8px;padding:8px 16px;background:#f0f4f0;border-radius:8px">
+      <div style="width:32px;height:32px;border-radius:50%;background:var(--primary);color:white;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:13px">${p.initials}</div>
+      <div><div style="font-weight:700;font-size:13px">${p.name}</div><div style="font-size:11px;color:var(--text-light)">æç¤¼çºè¡¨æå½</div></div>
+    </div>
+  `).join('');
+
+  // Schedule table
+  const sorted = [...data.announcements].sort((a,b) => a.date.localeCompare(b.date));
+  const tbody = document.getElementById('annScheduleBody');
+  tbody.innerHTML = sorted.map(a => {
+    const initial = a.presenter.charAt(0) === 'S' ? 'S' : a.presenter.charAt(0);
+    const d = new Date(a.date);
+    const dateStr = `${d.getMonth()+1}/${d.getDate()}ï¼ç«ï¼`;
+    const isPast = new Date(a.date) < new Date();
+    return `<tr style="${isPast ? 'opacity:0.6' : ''}">
+      <td style="font-weight:700;white-space:nowrap">${dateStr}</td>
+      <td><span style="display:inline-flex;align-items:center;gap:4px"><span style="width:22px;height:22px;border-radius:50%;background:var(--primary);color:white;display:inline-flex;align-items:center;justify-content:center;font-size:10px;font-weight:900">${initial}</span>${a.presenter}</span></td>
+      <td><span class="cat-badge ${CAT_CLASSES[a.category]}">${CAT_LABELS[a.category]}</span></td>
+      <td style="max-width:300px">${a.content}</td>
+      <td><span class="ann-status ${a.status}">${STATUS_LABELS[a.status]}</span></td>
+      <td><button class="ann-edit-btn" onclick="editAnnouncement('${a.id}')">ç·¨é</button></td>
+    </tr>`;
+  }).join('');
+
+  // Special events
+  const seg = document.getElementById('specialEventsGrid');
+  seg.innerHTML = data.specialEvents.map(se => `
+    <div class="special-event-card">
+      <h4>${se.type === 'clubIntro' ? 'ð ' : 'ð¢ '}${se.title}</h4>
+      <div class="desc">${se.desc}</div>
+      <div style="font-size:12px;margin-bottom:8px">
+        ${se.date ? `ð ${se.date}` : 'ð æ¥ç¨æªå®'}
+        ${se.slot ? ` / ${se.slot}` : ''}${se.timeSlot ? ` / ${se.timeSlot}` : ''}
+      </div>
+      <span class="se-status">ð ${se.status === 'planning' ? 'ä¼ç»ä¸­' : se.status === 'confirmed' ? 'ç¢ºå®' : 'å®äº'}</span>
+    </div>
+  `).join('');
+
+  // Dashboard card
+  renderDashChorei();
+}
+
+function renderDashChorei() {
+  const card = document.getElementById('dashChoreiCard');
+  const thisTue = getThisWeekTuesday();
+  const thisAnn = data.announcements.find(a => a.date === thisTue);
+  if (thisAnn) {
+    const initial = thisAnn.presenter.charAt(0) === 'S' ? 'S' : thisAnn.presenter.charAt(0);
+    card.innerHTML = `
+      <div class="card-title"><span class="icon">ð¤</span> ä»é±ã®æç¤¼çºè¡¨ï¼ç«æ 6:40ã 2åéï¼</div>
+      <div style="display:flex;align-items:center;gap:12px">
+        <div style="width:40px;height:40px;border-radius:50%;background:var(--primary);color:white;display:flex;align-items:center;justify-content:center;font-weight:900">${initial}</div>
+        <div>
+          <div style="font-weight:700">${thisAnn.content}</div>
+          <div style="font-size:12px;color:var(--text-light)">${thisAnn.presenter} ï½ <span class="cat-badge ${CAT_CLASSES[thisAnn.category]}">${CAT_LABELS[thisAnn.category]}</span></div>
+        </div>
+      </div>
+    `;
+    card.style.display = '';
+  } else {
+    card.style.display = 'none';
+  }
+}
+
+function editAnnouncement(id) {
+  const ann = data.announcements.find(a => a.id === id);
+  if (!ann) return;
+  openModal('announcement');
+  setTimeout(() => {
+    document.getElementById('annDate').value = ann.date;
+    document.getElementById('annPresenter').value = ann.presenter;
+    document.getElementById('annCategory').value = ann.category;
+    document.getElementById('annContent').value = ann.content;
+    document.getElementById('annStatus').value = ann.status;
+    document.getElementById('annEditId').value = ann.id;
+  }, 50);
+}
+
+function saveAnnouncement() {
+  const editId = document.getElementById('annEditId').value;
+  const entry = {
+    id: editId || ('a' + Date.now()),
+    date: document.getElementById('annDate').value,
+    presenter: document.getElementById('annPresenter').value,
+    category: document.getElementById('annCategory').value,
+    content: document.getElementById('annContent').value,
+    status: document.getElementById('annStatus').value,
+  };
+  if (!entry.date || !entry.content) return;
+  if (editId) {
+    const idx = data.announcements.findIndex(a => a.id === editId);
+    if (idx >= 0) data.announcements[idx] = entry;
+  } else {
+    data.announcements.push(entry);
+  }
+  saveData(data);
+  renderChorei();
+  closeModal();
+}
+
 // ===== INIT =====
+function renderJulyEventCountdown() {
+  const el = document.getElementById('julyEventCountdown');
+  if (!el) return;
+  const target = new Date('2026-07-15T12:00:00');
+  const today = new Date(); today.setHours(0,0,0,0);
+  const d = Math.ceil((target - today) / (1000*60*60*24));
+  if (d > 0) {
+    el.innerHTML = d + '<span> æ¥</span>';
+  } else if (d === 0) {
+    el.innerHTML = 'æ¬æ¥éå¬!';
+  } else {
+    el.innerHTML = 'éå¬æ¸ã¿';
+  }
+}
+
 function renderAll() {
   renderCountdown();
   renderTermProgress();
@@ -1552,6 +2132,8 @@ function renderAll() {
   renderTodos();
   renderClubs();
   renderMembers();
+  renderChorei();
+  renderJulyEventCountdown();
 }
 
 renderAll();
