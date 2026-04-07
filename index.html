@@ -1678,45 +1678,30 @@ function renderTodos() {
       <div class="todo-content">
         <div class="todo-title ${t.done ? 'done' : ''}">${t.title}</div>
         <div class="todo-meta">
-          <span class="todo-priority ${t.priority === 'high' ? 'priority-high' : t.priority === 'mid'function renderClubs() {
-  document.getElementById('clubList').innerHTML = data.clubs.map((c, idx) => `
-    <div class="club-card" style="position:relative">
-      <div style="display:flex;justify-content:space-between;align-items:flex-start">
-        <div class="club-name">${c.name}</div>
-        <button onclick="editClub(${idx})" style="background:none;border:1px solid #ccc;border-radius:6px;padding:4px 10px;font-size:11px;cursor:pointer;color:#555">編集</button>
-      </div>
-      ${c.desc ? `<div class="club-desc">${c.desc}</div>` : ''}
-      <div style="margin-top:6px;font-size:12px;color:#555">
-        <span style="display:inline-block;margin-right:12px">\u{1F451} 部長: <strong>${c.leader}</strong></span>
-      </div>
-      <div class="club-members" style="margin-top:4px">\u{1F465} ${c.memberCount || 0}名参加</div>
-      ${c.members && c.members.length > 0 ? `
-        <div style="margin-top:8px;padding-top:8px;border-top:1px dashed #ddd">
-          <div style="font-size:11px;color:#888;margin-bottom:4px">\u{1F4CB} 所属メンバー:</div>
-          <div style="display:flex;flex-wrap:wrap;gap:4px">
-            ${c.members.map(m => `<span style="background:#f0f4e8;padding:2px 8px;border-radius:10px;font-size:11px;color:#444">${m}</span>`).join('')}
-          </div>
-        </div>
-      ` : `
-        <div style="margin-top:8px;padding-top:8px;border-top:1px dashed #ddd">
-          <div style="font-size:11px;color:#bbb;font-style:italic">メンバー未登録（編集から追加できます）</div>
-        </div>
-      `}
-      <div style="margin-top:8px;display:flex;align-items:center;gap:8px">
-        <span class="status-badge status-${c.status}">${
-          c.status === 'active' ? '活動中' : c.status === 'planning' ? '準備中' : 'アイデア'
-        }</span>
-      </div>
-    </div>
-  `).join('');
-}ay:flex;align-items:center;gap:8px">
-        <span class="status-badge status-${c.status}">${
-          c.status === 'active' ? '活動中' : c.status === 'planning' ? '準備中' : 'アイデア'
-        }</span>
-      </div>
-    </div>
-  `).join('');
-}
+    function renderClubs() {
+      var html = "";
+      data.clubs.forEach(function(c, idx) {
+        var statusClass = c.status === "\u6d3b\u52d5\u4e2d" ? "active" : c.status === "\u6e96\u5099\u4e2d" ? "prep" : "idea";
+        var membersHtml = "";
+        if(c.members && c.members.length > 0) {
+          var tags = c.members.map(function(m){ return "<span style=\"background:#e8f5e9;padding:2px 8px;border-radius:10px;font-size:0.8em;\">" + m + "</span>"; }).join("");
+          membersHtml = "<div style=\"margin-top:8px;padding-top:8px;border-top:1px solid #eee;\"><div>\ud83d\udccb \u6240\u5c5e\u30e1\u30f3\u30d0\u30fc:</div><div style=\"display:flex;flex-wrap:wrap;gap:4px;margin-top:4px;\">" + tags + "</div></div>";
+        } else {
+          membersHtml = "<div style=\"margin-top:8px;\"><div style=\"color:#999;font-size:0.85em;\">\u30e1\u30f3\u30d0\u30fc\u672a\u767b\u9332\uff08\u7de8\u96c6\u304b\u3089\u8ffd\u52a0\u3067\u304d\u307e\u3059\uff09</div></div>";
+        }
+        html += "<div class=\"club-card\" style=\"position:relative\">"
+          + "<div style=\"display:flex;justify-content:space-between;align-items:flex-start;\">"
+          + "<div class=\"club-name\">" + c.name + "</div>"
+          + "<button onclick=\"editClub(" + idx + ")\" style=\"background:#1a73e8;color:#fff;border:none;padding:4px 10px;border-radius:4px;font-size:0.8em;cursor:pointer;\">\u7de8\u96c6</button>"
+          + "</div>"
+          + "<div style=\"margin:4px 0;color:#666;\">\ud83d\udc64 \u90e8\u9577: " + c.leader + "</div>"
+          + "<div style=\"color:#666;\">\ud83d\udc65 " + (c.memberCount || 0) + "\u540d</div>"
+          + membersHtml
+          + "<span class=\"status-badge " + statusClass + "\">" + c.status + "</span>"
+          + "</div>";
+      });
+      document.getElementById("clubList").innerHTML = html;
+    }
 
 function renderMembers() {
   document.getElementById('memberList').innerHTML = data.members.map(m => `
