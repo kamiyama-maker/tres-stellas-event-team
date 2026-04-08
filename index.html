@@ -1678,6 +1678,14 @@ function renderTodos() {
       <div class="todo-content">
         <div class="todo-title ${t.done ? 'done' : ''}">${t.title}</div>
         <div class="todo-meta">
+                <span class="todo-priority ${t.priority === 'high' ? 'priority-high' : t.priority === 'mid' ? 'priority-mid' : 'priority-low'}">${t.priority === 'high' ? '高' : t.priority === 'mid' ? '中' : '低'}</span>
+                <span>${t.assignee || ''}</span>
+                ${t.due ? '<span>📅 ' + t.due + '</span>' : ''}
+              </div>
+            </div>
+          </div>
+        `).join('');
+      }
     function renderClubs() {
       var html = "";
       data.clubs.forEach(function(c, idx) {
